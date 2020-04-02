@@ -7,10 +7,21 @@ Current conceptual model is [here](https://docs.google.com/document/d/1Wys14HNJA
 The TransformerService can be run from the command line using java and requires two text inputs that represent the path of first
 the XSL file and second the source XML(XMI or XSD) file.
 
-## How to build
+## How to build Java Project
+```
 mvn package
+```
 
-## How to run
+## How to run Java Project
+```
 java org.basic.xsd.transform.fhir.TransformService "resources/ClinGen2Fhir.xsl" "resources/EASchemaAssertion.XSD"
+```
 
+```
 java -jar target/XSLTTransformer-0.0.1-SNAPSHOT-jar-with-dependencies.jar resources/ClinGen2Fhir.xsl resources/EASchemaAssertion.XSD
+```
+
+## How to run saxon parser
+```
+java -jar ./saxon/saxon9he.jar -t -s:resources/EASchemaAssertion.XSD -xsl:resources/ClinGen2Fhir.xsl -o:output.txt
+```
