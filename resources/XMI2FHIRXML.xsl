@@ -1,25 +1,26 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
 
 <xsl:stylesheet exclude-result-prefixes="#all"
-  xmlns:xsl="http://www.w3.org/1999/XSL/Transform" 
+  xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
      xmlns:xs="http://www.w3.org/2001/XMLSchema"
-     xmlns:uml="http://schema.omg.org/spec/UML/2.1" 
-     xmlns:xmi="http://schema.omg.org/spec/XMI/2.1" 
+     xmlns:uml="http://schema.omg.org/spec/UML/2.1"
+     xmlns:xmi="http://schema.omg.org/spec/XMI/2.1"
      xmlns:fhir="http://hl7.org/fhir"
-     xmlns:thecustomprofile="http://www.sparxsystems.com/profiles/thecustomprofile/1.0" 
+     xmlns:thecustomprofile="http://www.sparxsystems.com/profiles/thecustomprofile/1.0"
   version="1.0">
     <xsl:output method="xml" indent="yes" omit-xml-declaration = "yes" />
     <xsl:strip-space elements="*"/>
+
     <xsl:template match="/">
        <xsl:apply-templates/>
   	</xsl:template>
 
-
-
     <xsl:template match="packagedElement">
-    <xsl:for-each select="packagedElement">
-    <xsl:element name="StructureDefinition" namespace="http://hl7.org/fhir">
-    	<xsl:element name="Id">
+    <xsl:for-each select="packagedElement[@*[1] = 'uml:Class']"> <!-- qualifies on attribute xmi:type="uml:Class"  -->
+    <!-- hard coding the StructureDefintion like this (instead of using xsl:element)
+         keeps all the child elements from having an empty 'xmlns:' (namespace) tag-->
+    <StructureDefinition namespace="http://hl7.org/fhir">
+      <xsl:element name="id">
     	 	<xsl:attribute name="value">
     	 	   <xsl:value-of select="@name"/>
     	 	</xsl:attribute>
@@ -98,13 +99,11 @@
     	</xsl:element>
     	    	<xsl:element name="derivation">
 			<xsl:attribute name="value">specialization</xsl:attribute>
-    	</xsl:element>    	
-    </xsl:element>
+    	</xsl:element>
+    </StructureDefinition>
     <xsl:text>
 
 </xsl:text>
     </xsl:for-each>
     </xsl:template>
 </xsl:stylesheet>
-
-

@@ -1,119 +1,680 @@
-<?xml version="1.0" encoding="UTF-8"?>
-	
-	
-	
-	
-	
-		
-			An Activity is a process occurring over time that acts upon or with entities. Activities can generate, modify, evaluate, or destroy entities, including Assertions, Evidence Lines, and Evidence Items. [Source: SEPIO Ontology]
-		
-		
-			
-		
-	
-	
-	
-		
-			An Agent is something that bears some form of responsibility for an activity taking place, for the existence of an entity, or for another agent's activity (from PROV). [Source: SEPIO Ontology]
-		
-		
-	
-	
-	
-		
-			A statement made by a particular agent on a particular occasion that a particular proposition is true, based on the evaluation evidence. [Source: SEPIO Ontology]
-		
-		
-			
-				
-					An indicator of degree of confidence that the creator of the Assertion has that the proposition it puts forth is true. [Source: SEPIO Ontology]
-				
-			
-			
-				
-					The date the Assertion was originally made. [Source: SEPIO Ontology]
-				
-			
-			
-			
-			
-			
-			
-			
-		
-	
-	
-	
-		
-			A collection of information content entities intended to be understood together as a whole (source: IAO) [Soiurce: SEPIO Ontology]
-
-A physical object, or electronic counterpart, that is characterized by containing writing which is meant to be human-readable. [ Source: NCI Thesaurus; https://ncit.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&amp;version=19.03d&amp;ns=ncit&amp;code=C19498&amp;key=n1123067220&amp;b=1&amp;n=null ]
-		
-		
-	
-	
-	
-		
-			An Evidence Line is an independent, evidence-based argument used to evaluate the validity of a particular proposition. [Source: SEPIO Ontology]
-		
-		
-			
-			
-				
-					the proposition the evidence is used for.
-				
-			
-			
-			
-			
-		
-	
-	
-	
-		
-			An Information_Content_Entity (ICE) is an entity that is about something. ICEs are abstract (non-physical) entities that represent the information encoded in physical artifacts such as photographs, books, or digital storage medium (as opposed to the physical medium itself). [Source: SEPIO Ontology]
-		
-		
-			
-				
-					An Entity the information is about. [Source: SEPIO Ontology]
-				
-			
-			
-			
-			
-			
-		
-	
-	
-	
-		
-			 A set of instructions that specify how to achieve some objective. [Source: SEPIO Ontology]
-		
-		
-	
-	
-	
-		
-			An abstract entity representing the sharable meaning expressed in a particular Assertion.
-Propositions are sharable statements of purported truth. They represent the core fact or meaning that is put forth as true in an Assertion. They are 'sharable' in that the same Proposition can be expressed in separate Assertions made by different Agents, on different occasions. As truth bearers, Propositions are either true or false.
-[Source: SEPIO Ontology]
-		
-		
-			
-				
-					The entity or concept that the subject is associated with in the Proposition- typically a specific domain entity or generic concept related to it, or a piece of data about it.  [Source: SEPIO Ontology]
-				
-			
-			
-				
-					The relationship stated to hold between the subject and descriptor. [Source: SEPIO Ontology]
-				
-			
-			
-				
-					The Variant that the Statement is about. [Source: SEPIO Ontology]
-				
-			
-		
-	
+<StructureDefinition xmlns="http://hl7.org/fhir">
+   <Id xmlns="" value="Class1"/>
+   <text xmlns="">
+      <status value="generated"/>
+      <div xmlns="http://www.w3.org/1999/xhtml">
+         <p>
+            <b>CG Class1 Logical Model</b>
+         </p>
+         <p>A class to Class1 model</p>
+      </div>
+   </text>
+   <url xmlns=""
+        value="http://hl7.org/fhir/uv/genomics-logicalmodel/StructureDefinition/Class1"/>
+   <version xmlns="" value="0.1.0"/>
+   <name xmlns="" value="Class1"/>
+   <title xmlns="" value="CG Class1 Logical Model"/>
+   <status xmlns="" value="draft"/>
+   <date xmlns="" value="2020-04-01T19:00:00-05:00"/>
+   <publisher xmlns="" value="HL7 International - Clinical Genomics Work Group"/>
+   <contact xmlns="">
+      <telecom>
+         <system value="url"/>
+         <value value="http://hl7.org/Special/committees/[something]"/>
+      </telecom>
+   </contact>
+   <description xmlns="" value="An abstract class to model Class1."/>
+   <jurisdiction xmlns="">
+      <coding>
+         <system value="http://unstats.un.org/unsd/methods/m49/m49.htm"/>
+         <code value="001"/>
+      </coding>
+   </jurisdiction>
+   <fhirVersion xmlns="" value="4.0.1"/>
+   <kind xmlns="" value="logical"/>
+   <abstract xmlns="" value="false"/>
+   <type xmlns="" value="Class1"/>
+   <baseDefinition xmlns=""
+                   value="http://hl7.org/fhir/uv/genomics-logicalmodel/StructureDefinition/@TBD"/>
+   <derivation xmlns="" value="specialization"/>
+</StructureDefinition>
+<StructureDefinition xmlns="http://hl7.org/fhir">
+   <Id xmlns="" value="Class2"/>
+   <text xmlns="">
+      <status value="generated"/>
+      <div xmlns="http://www.w3.org/1999/xhtml">
+         <p>
+            <b>CG Class2 Logical Model</b>
+         </p>
+         <p>A class to Class2 model</p>
+      </div>
+   </text>
+   <url xmlns=""
+        value="http://hl7.org/fhir/uv/genomics-logicalmodel/StructureDefinition/Class2"/>
+   <version xmlns="" value="0.1.0"/>
+   <name xmlns="" value="Class2"/>
+   <title xmlns="" value="CG Class2 Logical Model"/>
+   <status xmlns="" value="draft"/>
+   <date xmlns="" value="2020-04-01T19:00:00-05:00"/>
+   <publisher xmlns="" value="HL7 International - Clinical Genomics Work Group"/>
+   <contact xmlns="">
+      <telecom>
+         <system value="url"/>
+         <value value="http://hl7.org/Special/committees/[something]"/>
+      </telecom>
+   </contact>
+   <description xmlns="" value="An abstract class to model Class2."/>
+   <jurisdiction xmlns="">
+      <coding>
+         <system value="http://unstats.un.org/unsd/methods/m49/m49.htm"/>
+         <code value="001"/>
+      </coding>
+   </jurisdiction>
+   <fhirVersion xmlns="" value="4.0.1"/>
+   <kind xmlns="" value="logical"/>
+   <abstract xmlns="" value="false"/>
+   <type xmlns="" value="Class2"/>
+   <baseDefinition xmlns=""
+                   value="http://hl7.org/fhir/uv/genomics-logicalmodel/StructureDefinition/@TBD"/>
+   <derivation xmlns="" value="specialization"/>
+</StructureDefinition>
+<StructureDefinition xmlns="http://hl7.org/fhir">
+   <Id xmlns="" value="CoordinateInterval"/>
+   <text xmlns="">
+      <status value="generated"/>
+      <div xmlns="http://www.w3.org/1999/xhtml">
+         <p>
+            <b>CG CoordinateInterval Logical Model</b>
+         </p>
+         <p>A class to CoordinateInterval model</p>
+      </div>
+   </text>
+   <url xmlns=""
+        value="http://hl7.org/fhir/uv/genomics-logicalmodel/StructureDefinition/CoordinateInterval"/>
+   <version xmlns="" value="0.1.0"/>
+   <name xmlns="" value="CoordinateInterval"/>
+   <title xmlns="" value="CG CoordinateInterval Logical Model"/>
+   <status xmlns="" value="draft"/>
+   <date xmlns="" value="2020-04-01T19:00:00-05:00"/>
+   <publisher xmlns="" value="HL7 International - Clinical Genomics Work Group"/>
+   <contact xmlns="">
+      <telecom>
+         <system value="url"/>
+         <value value="http://hl7.org/Special/committees/[something]"/>
+      </telecom>
+   </contact>
+   <description xmlns="" value="An abstract class to model CoordinateInterval."/>
+   <jurisdiction xmlns="">
+      <coding>
+         <system value="http://unstats.un.org/unsd/methods/m49/m49.htm"/>
+         <code value="001"/>
+      </coding>
+   </jurisdiction>
+   <fhirVersion xmlns="" value="4.0.1"/>
+   <kind xmlns="" value="logical"/>
+   <abstract xmlns="" value="false"/>
+   <type xmlns="" value="CoordinateInterval"/>
+   <baseDefinition xmlns=""
+                   value="http://hl7.org/fhir/uv/genomics-logicalmodel/StructureDefinition/@TBD"/>
+   <derivation xmlns="" value="specialization"/>
+</StructureDefinition>
+<StructureDefinition xmlns="http://hl7.org/fhir">
+   <Id xmlns="" value=""/>
+   <text xmlns="">
+      <status value="generated"/>
+      <div xmlns="http://www.w3.org/1999/xhtml">
+         <p>
+            <b>CG  Logical Model</b>
+         </p>
+         <p>A class to  model</p>
+      </div>
+   </text>
+   <url xmlns=""
+        value="http://hl7.org/fhir/uv/genomics-logicalmodel/StructureDefinition/"/>
+   <version xmlns="" value="0.1.0"/>
+   <name xmlns="" value=""/>
+   <title xmlns="" value="CG  Logical Model"/>
+   <status xmlns="" value="draft"/>
+   <date xmlns="" value="2020-04-01T19:00:00-05:00"/>
+   <publisher xmlns="" value="HL7 International - Clinical Genomics Work Group"/>
+   <contact xmlns="">
+      <telecom>
+         <system value="url"/>
+         <value value="http://hl7.org/Special/committees/[something]"/>
+      </telecom>
+   </contact>
+   <description xmlns="" value="An abstract class to model ."/>
+   <jurisdiction xmlns="">
+      <coding>
+         <system value="http://unstats.un.org/unsd/methods/m49/m49.htm"/>
+         <code value="001"/>
+      </coding>
+   </jurisdiction>
+   <fhirVersion xmlns="" value="4.0.1"/>
+   <kind xmlns="" value="logical"/>
+   <abstract xmlns="" value="false"/>
+   <type xmlns="" value=""/>
+   <baseDefinition xmlns=""
+                   value="http://hl7.org/fhir/uv/genomics-logicalmodel/StructureDefinition/@TBD"/>
+   <derivation xmlns="" value="specialization"/>
+</StructureDefinition>
+<StructureDefinition xmlns="http://hl7.org/fhir">
+   <Id xmlns="" value="FormattedSequence"/>
+   <text xmlns="">
+      <status value="generated"/>
+      <div xmlns="http://www.w3.org/1999/xhtml">
+         <p>
+            <b>CG FormattedSequence Logical Model</b>
+         </p>
+         <p>A class to FormattedSequence model</p>
+      </div>
+   </text>
+   <url xmlns=""
+        value="http://hl7.org/fhir/uv/genomics-logicalmodel/StructureDefinition/FormattedSequence"/>
+   <version xmlns="" value="0.1.0"/>
+   <name xmlns="" value="FormattedSequence"/>
+   <title xmlns="" value="CG FormattedSequence Logical Model"/>
+   <status xmlns="" value="draft"/>
+   <date xmlns="" value="2020-04-01T19:00:00-05:00"/>
+   <publisher xmlns="" value="HL7 International - Clinical Genomics Work Group"/>
+   <contact xmlns="">
+      <telecom>
+         <system value="url"/>
+         <value value="http://hl7.org/Special/committees/[something]"/>
+      </telecom>
+   </contact>
+   <description xmlns="" value="An abstract class to model FormattedSequence."/>
+   <jurisdiction xmlns="">
+      <coding>
+         <system value="http://unstats.un.org/unsd/methods/m49/m49.htm"/>
+         <code value="001"/>
+      </coding>
+   </jurisdiction>
+   <fhirVersion xmlns="" value="4.0.1"/>
+   <kind xmlns="" value="logical"/>
+   <abstract xmlns="" value="false"/>
+   <type xmlns="" value="FormattedSequence"/>
+   <baseDefinition xmlns=""
+                   value="http://hl7.org/fhir/uv/genomics-logicalmodel/StructureDefinition/@TBD"/>
+   <derivation xmlns="" value="specialization"/>
+</StructureDefinition>
+<StructureDefinition xmlns="http://hl7.org/fhir">
+   <Id xmlns="" value="GenomeAssembly"/>
+   <text xmlns="">
+      <status value="generated"/>
+      <div xmlns="http://www.w3.org/1999/xhtml">
+         <p>
+            <b>CG GenomeAssembly Logical Model</b>
+         </p>
+         <p>A class to GenomeAssembly model</p>
+      </div>
+   </text>
+   <url xmlns=""
+        value="http://hl7.org/fhir/uv/genomics-logicalmodel/StructureDefinition/GenomeAssembly"/>
+   <version xmlns="" value="0.1.0"/>
+   <name xmlns="" value="GenomeAssembly"/>
+   <title xmlns="" value="CG GenomeAssembly Logical Model"/>
+   <status xmlns="" value="draft"/>
+   <date xmlns="" value="2020-04-01T19:00:00-05:00"/>
+   <publisher xmlns="" value="HL7 International - Clinical Genomics Work Group"/>
+   <contact xmlns="">
+      <telecom>
+         <system value="url"/>
+         <value value="http://hl7.org/Special/committees/[something]"/>
+      </telecom>
+   </contact>
+   <description xmlns="" value="An abstract class to model GenomeAssembly."/>
+   <jurisdiction xmlns="">
+      <coding>
+         <system value="http://unstats.un.org/unsd/methods/m49/m49.htm"/>
+         <code value="001"/>
+      </coding>
+   </jurisdiction>
+   <fhirVersion xmlns="" value="4.0.1"/>
+   <kind xmlns="" value="logical"/>
+   <abstract xmlns="" value="false"/>
+   <type xmlns="" value="GenomeAssembly"/>
+   <baseDefinition xmlns=""
+                   value="http://hl7.org/fhir/uv/genomics-logicalmodel/StructureDefinition/@TBD"/>
+   <derivation xmlns="" value="specialization"/>
+</StructureDefinition>
+<StructureDefinition xmlns="http://hl7.org/fhir">
+   <Id xmlns="" value="isPart"/>
+   <text xmlns="">
+      <status value="generated"/>
+      <div xmlns="http://www.w3.org/1999/xhtml">
+         <p>
+            <b>CG isPart Logical Model</b>
+         </p>
+         <p>A class to isPart model</p>
+      </div>
+   </text>
+   <url xmlns=""
+        value="http://hl7.org/fhir/uv/genomics-logicalmodel/StructureDefinition/isPart"/>
+   <version xmlns="" value="0.1.0"/>
+   <name xmlns="" value="isPart"/>
+   <title xmlns="" value="CG isPart Logical Model"/>
+   <status xmlns="" value="draft"/>
+   <date xmlns="" value="2020-04-01T19:00:00-05:00"/>
+   <publisher xmlns="" value="HL7 International - Clinical Genomics Work Group"/>
+   <contact xmlns="">
+      <telecom>
+         <system value="url"/>
+         <value value="http://hl7.org/Special/committees/[something]"/>
+      </telecom>
+   </contact>
+   <description xmlns="" value="An abstract class to model isPart."/>
+   <jurisdiction xmlns="">
+      <coding>
+         <system value="http://unstats.un.org/unsd/methods/m49/m49.htm"/>
+         <code value="001"/>
+      </coding>
+   </jurisdiction>
+   <fhirVersion xmlns="" value="4.0.1"/>
+   <kind xmlns="" value="logical"/>
+   <abstract xmlns="" value="false"/>
+   <type xmlns="" value="isPart"/>
+   <baseDefinition xmlns=""
+                   value="http://hl7.org/fhir/uv/genomics-logicalmodel/StructureDefinition/@TBD"/>
+   <derivation xmlns="" value="specialization"/>
+</StructureDefinition>
+<StructureDefinition xmlns="http://hl7.org/fhir">
+   <Id xmlns="" value="hasSequence"/>
+   <text xmlns="">
+      <status value="generated"/>
+      <div xmlns="http://www.w3.org/1999/xhtml">
+         <p>
+            <b>CG hasSequence Logical Model</b>
+         </p>
+         <p>A class to hasSequence model</p>
+      </div>
+   </text>
+   <url xmlns=""
+        value="http://hl7.org/fhir/uv/genomics-logicalmodel/StructureDefinition/hasSequence"/>
+   <version xmlns="" value="0.1.0"/>
+   <name xmlns="" value="hasSequence"/>
+   <title xmlns="" value="CG hasSequence Logical Model"/>
+   <status xmlns="" value="draft"/>
+   <date xmlns="" value="2020-04-01T19:00:00-05:00"/>
+   <publisher xmlns="" value="HL7 International - Clinical Genomics Work Group"/>
+   <contact xmlns="">
+      <telecom>
+         <system value="url"/>
+         <value value="http://hl7.org/Special/committees/[something]"/>
+      </telecom>
+   </contact>
+   <description xmlns="" value="An abstract class to model hasSequence."/>
+   <jurisdiction xmlns="">
+      <coding>
+         <system value="http://unstats.un.org/unsd/methods/m49/m49.htm"/>
+         <code value="001"/>
+      </coding>
+   </jurisdiction>
+   <fhirVersion xmlns="" value="4.0.1"/>
+   <kind xmlns="" value="logical"/>
+   <abstract xmlns="" value="false"/>
+   <type xmlns="" value="hasSequence"/>
+   <baseDefinition xmlns=""
+                   value="http://hl7.org/fhir/uv/genomics-logicalmodel/StructureDefinition/@TBD"/>
+   <derivation xmlns="" value="specialization"/>
+</StructureDefinition>
+<StructureDefinition xmlns="http://hl7.org/fhir">
+   <Id xmlns="" value="RelativeSequence"/>
+   <text xmlns="">
+      <status value="generated"/>
+      <div xmlns="http://www.w3.org/1999/xhtml">
+         <p>
+            <b>CG RelativeSequence Logical Model</b>
+         </p>
+         <p>A class to RelativeSequence model</p>
+      </div>
+   </text>
+   <url xmlns=""
+        value="http://hl7.org/fhir/uv/genomics-logicalmodel/StructureDefinition/RelativeSequence"/>
+   <version xmlns="" value="0.1.0"/>
+   <name xmlns="" value="RelativeSequence"/>
+   <title xmlns="" value="CG RelativeSequence Logical Model"/>
+   <status xmlns="" value="draft"/>
+   <date xmlns="" value="2020-04-01T19:00:00-05:00"/>
+   <publisher xmlns="" value="HL7 International - Clinical Genomics Work Group"/>
+   <contact xmlns="">
+      <telecom>
+         <system value="url"/>
+         <value value="http://hl7.org/Special/committees/[something]"/>
+      </telecom>
+   </contact>
+   <description xmlns="" value="An abstract class to model RelativeSequence."/>
+   <jurisdiction xmlns="">
+      <coding>
+         <system value="http://unstats.un.org/unsd/methods/m49/m49.htm"/>
+         <code value="001"/>
+      </coding>
+   </jurisdiction>
+   <fhirVersion xmlns="" value="4.0.1"/>
+   <kind xmlns="" value="logical"/>
+   <abstract xmlns="" value="false"/>
+   <type xmlns="" value="RelativeSequence"/>
+   <baseDefinition xmlns=""
+                   value="http://hl7.org/fhir/uv/genomics-logicalmodel/StructureDefinition/@TBD"/>
+   <derivation xmlns="" value="specialization"/>
+</StructureDefinition>
+<StructureDefinition xmlns="http://hl7.org/fhir">
+   <Id xmlns="" value="composedOf"/>
+   <text xmlns="">
+      <status value="generated"/>
+      <div xmlns="http://www.w3.org/1999/xhtml">
+         <p>
+            <b>CG composedOf Logical Model</b>
+         </p>
+         <p>A class to composedOf model</p>
+      </div>
+   </text>
+   <url xmlns=""
+        value="http://hl7.org/fhir/uv/genomics-logicalmodel/StructureDefinition/composedOf"/>
+   <version xmlns="" value="0.1.0"/>
+   <name xmlns="" value="composedOf"/>
+   <title xmlns="" value="CG composedOf Logical Model"/>
+   <status xmlns="" value="draft"/>
+   <date xmlns="" value="2020-04-01T19:00:00-05:00"/>
+   <publisher xmlns="" value="HL7 International - Clinical Genomics Work Group"/>
+   <contact xmlns="">
+      <telecom>
+         <system value="url"/>
+         <value value="http://hl7.org/Special/committees/[something]"/>
+      </telecom>
+   </contact>
+   <description xmlns="" value="An abstract class to model composedOf."/>
+   <jurisdiction xmlns="">
+      <coding>
+         <system value="http://unstats.un.org/unsd/methods/m49/m49.htm"/>
+         <code value="001"/>
+      </coding>
+   </jurisdiction>
+   <fhirVersion xmlns="" value="4.0.1"/>
+   <kind xmlns="" value="logical"/>
+   <abstract xmlns="" value="false"/>
+   <type xmlns="" value="composedOf"/>
+   <baseDefinition xmlns=""
+                   value="http://hl7.org/fhir/uv/genomics-logicalmodel/StructureDefinition/@TBD"/>
+   <derivation xmlns="" value="specialization"/>
+</StructureDefinition>
+<StructureDefinition xmlns="http://hl7.org/fhir">
+   <Id xmlns="" value="Sequence"/>
+   <text xmlns="">
+      <status value="generated"/>
+      <div xmlns="http://www.w3.org/1999/xhtml">
+         <p>
+            <b>CG Sequence Logical Model</b>
+         </p>
+         <p>A class to Sequence model</p>
+      </div>
+   </text>
+   <url xmlns=""
+        value="http://hl7.org/fhir/uv/genomics-logicalmodel/StructureDefinition/Sequence"/>
+   <version xmlns="" value="0.1.0"/>
+   <name xmlns="" value="Sequence"/>
+   <title xmlns="" value="CG Sequence Logical Model"/>
+   <status xmlns="" value="draft"/>
+   <date xmlns="" value="2020-04-01T19:00:00-05:00"/>
+   <publisher xmlns="" value="HL7 International - Clinical Genomics Work Group"/>
+   <contact xmlns="">
+      <telecom>
+         <system value="url"/>
+         <value value="http://hl7.org/Special/committees/[something]"/>
+      </telecom>
+   </contact>
+   <description xmlns="" value="An abstract class to model Sequence."/>
+   <jurisdiction xmlns="">
+      <coding>
+         <system value="http://unstats.un.org/unsd/methods/m49/m49.htm"/>
+         <code value="001"/>
+      </coding>
+   </jurisdiction>
+   <fhirVersion xmlns="" value="4.0.1"/>
+   <kind xmlns="" value="logical"/>
+   <abstract xmlns="" value="false"/>
+   <type xmlns="" value="Sequence"/>
+   <baseDefinition xmlns=""
+                   value="http://hl7.org/fhir/uv/genomics-logicalmodel/StructureDefinition/@TBD"/>
+   <derivation xmlns="" value="specialization"/>
+</StructureDefinition>
+<StructureDefinition xmlns="http://hl7.org/fhir">
+   <Id xmlns="" value="value"/>
+   <text xmlns="">
+      <status value="generated"/>
+      <div xmlns="http://www.w3.org/1999/xhtml">
+         <p>
+            <b>CG value Logical Model</b>
+         </p>
+         <p>A class to value model</p>
+      </div>
+   </text>
+   <url xmlns=""
+        value="http://hl7.org/fhir/uv/genomics-logicalmodel/StructureDefinition/value"/>
+   <version xmlns="" value="0.1.0"/>
+   <name xmlns="" value="value"/>
+   <title xmlns="" value="CG value Logical Model"/>
+   <status xmlns="" value="draft"/>
+   <date xmlns="" value="2020-04-01T19:00:00-05:00"/>
+   <publisher xmlns="" value="HL7 International - Clinical Genomics Work Group"/>
+   <contact xmlns="">
+      <telecom>
+         <system value="url"/>
+         <value value="http://hl7.org/Special/committees/[something]"/>
+      </telecom>
+   </contact>
+   <description xmlns="" value="An abstract class to model value."/>
+   <jurisdiction xmlns="">
+      <coding>
+         <system value="http://unstats.un.org/unsd/methods/m49/m49.htm"/>
+         <code value="001"/>
+      </coding>
+   </jurisdiction>
+   <fhirVersion xmlns="" value="4.0.1"/>
+   <kind xmlns="" value="logical"/>
+   <abstract xmlns="" value="false"/>
+   <type xmlns="" value="value"/>
+   <baseDefinition xmlns=""
+                   value="http://hl7.org/fhir/uv/genomics-logicalmodel/StructureDefinition/@TBD"/>
+   <derivation xmlns="" value="specialization"/>
+</StructureDefinition>
+<StructureDefinition xmlns="http://hl7.org/fhir">
+   <Id xmlns="" value="SequenceEdit"/>
+   <text xmlns="">
+      <status value="generated"/>
+      <div xmlns="http://www.w3.org/1999/xhtml">
+         <p>
+            <b>CG SequenceEdit Logical Model</b>
+         </p>
+         <p>A class to SequenceEdit model</p>
+      </div>
+   </text>
+   <url xmlns=""
+        value="http://hl7.org/fhir/uv/genomics-logicalmodel/StructureDefinition/SequenceEdit"/>
+   <version xmlns="" value="0.1.0"/>
+   <name xmlns="" value="SequenceEdit"/>
+   <title xmlns="" value="CG SequenceEdit Logical Model"/>
+   <status xmlns="" value="draft"/>
+   <date xmlns="" value="2020-04-01T19:00:00-05:00"/>
+   <publisher xmlns="" value="HL7 International - Clinical Genomics Work Group"/>
+   <contact xmlns="">
+      <telecom>
+         <system value="url"/>
+         <value value="http://hl7.org/Special/committees/[something]"/>
+      </telecom>
+   </contact>
+   <description xmlns="" value="An abstract class to model SequenceEdit."/>
+   <jurisdiction xmlns="">
+      <coding>
+         <system value="http://unstats.un.org/unsd/methods/m49/m49.htm"/>
+         <code value="001"/>
+      </coding>
+   </jurisdiction>
+   <fhirVersion xmlns="" value="4.0.1"/>
+   <kind xmlns="" value="logical"/>
+   <abstract xmlns="" value="false"/>
+   <type xmlns="" value="SequenceEdit"/>
+   <baseDefinition xmlns=""
+                   value="http://hl7.org/fhir/uv/genomics-logicalmodel/StructureDefinition/@TBD"/>
+   <derivation xmlns="" value="specialization"/>
+</StructureDefinition>
+<StructureDefinition xmlns="http://hl7.org/fhir">
+   <Id xmlns="" value="SequenceRepresentation"/>
+   <text xmlns="">
+      <status value="generated"/>
+      <div xmlns="http://www.w3.org/1999/xhtml">
+         <p>
+            <b>CG SequenceRepresentation Logical Model</b>
+         </p>
+         <p>A class to SequenceRepresentation model</p>
+      </div>
+   </text>
+   <url xmlns=""
+        value="http://hl7.org/fhir/uv/genomics-logicalmodel/StructureDefinition/SequenceRepresentation"/>
+   <version xmlns="" value="0.1.0"/>
+   <name xmlns="" value="SequenceRepresentation"/>
+   <title xmlns="" value="CG SequenceRepresentation Logical Model"/>
+   <status xmlns="" value="draft"/>
+   <date xmlns="" value="2020-04-01T19:00:00-05:00"/>
+   <publisher xmlns="" value="HL7 International - Clinical Genomics Work Group"/>
+   <contact xmlns="">
+      <telecom>
+         <system value="url"/>
+         <value value="http://hl7.org/Special/committees/[something]"/>
+      </telecom>
+   </contact>
+   <description xmlns="" value="An abstract class to model SequenceRepresentation."/>
+   <jurisdiction xmlns="">
+      <coding>
+         <system value="http://unstats.un.org/unsd/methods/m49/m49.htm"/>
+         <code value="001"/>
+      </coding>
+   </jurisdiction>
+   <fhirVersion xmlns="" value="4.0.1"/>
+   <kind xmlns="" value="logical"/>
+   <abstract xmlns="" value="false"/>
+   <type xmlns="" value="SequenceRepresentation"/>
+   <baseDefinition xmlns=""
+                   value="http://hl7.org/fhir/uv/genomics-logicalmodel/StructureDefinition/@TBD"/>
+   <derivation xmlns="" value="specialization"/>
+</StructureDefinition>
+<StructureDefinition xmlns="http://hl7.org/fhir">
+   <Id xmlns="" value="SimpleSequence"/>
+   <text xmlns="">
+      <status value="generated"/>
+      <div xmlns="http://www.w3.org/1999/xhtml">
+         <p>
+            <b>CG SimpleSequence Logical Model</b>
+         </p>
+         <p>A class to SimpleSequence model</p>
+      </div>
+   </text>
+   <url xmlns=""
+        value="http://hl7.org/fhir/uv/genomics-logicalmodel/StructureDefinition/SimpleSequence"/>
+   <version xmlns="" value="0.1.0"/>
+   <name xmlns="" value="SimpleSequence"/>
+   <title xmlns="" value="CG SimpleSequence Logical Model"/>
+   <status xmlns="" value="draft"/>
+   <date xmlns="" value="2020-04-01T19:00:00-05:00"/>
+   <publisher xmlns="" value="HL7 International - Clinical Genomics Work Group"/>
+   <contact xmlns="">
+      <telecom>
+         <system value="url"/>
+         <value value="http://hl7.org/Special/committees/[something]"/>
+      </telecom>
+   </contact>
+   <description xmlns="" value="An abstract class to model SimpleSequence."/>
+   <jurisdiction xmlns="">
+      <coding>
+         <system value="http://unstats.un.org/unsd/methods/m49/m49.htm"/>
+         <code value="001"/>
+      </coding>
+   </jurisdiction>
+   <fhirVersion xmlns="" value="4.0.1"/>
+   <kind xmlns="" value="logical"/>
+   <abstract xmlns="" value="false"/>
+   <type xmlns="" value="SimpleSequence"/>
+   <baseDefinition xmlns=""
+                   value="http://hl7.org/fhir/uv/genomics-logicalmodel/StructureDefinition/@TBD"/>
+   <derivation xmlns="" value="specialization"/>
+</StructureDefinition>
+<StructureDefinition xmlns="http://hl7.org/fhir">
+   <Id xmlns="" value="Interval"/>
+   <text xmlns="">
+      <status value="generated"/>
+      <div xmlns="http://www.w3.org/1999/xhtml">
+         <p>
+            <b>CG Interval Logical Model</b>
+         </p>
+         <p>A class to Interval model</p>
+      </div>
+   </text>
+   <url xmlns=""
+        value="http://hl7.org/fhir/uv/genomics-logicalmodel/StructureDefinition/Interval"/>
+   <version xmlns="" value="0.1.0"/>
+   <name xmlns="" value="Interval"/>
+   <title xmlns="" value="CG Interval Logical Model"/>
+   <status xmlns="" value="draft"/>
+   <date xmlns="" value="2020-04-01T19:00:00-05:00"/>
+   <publisher xmlns="" value="HL7 International - Clinical Genomics Work Group"/>
+   <contact xmlns="">
+      <telecom>
+         <system value="url"/>
+         <value value="http://hl7.org/Special/committees/[something]"/>
+      </telecom>
+   </contact>
+   <description xmlns="" value="An abstract class to model Interval."/>
+   <jurisdiction xmlns="">
+      <coding>
+         <system value="http://unstats.un.org/unsd/methods/m49/m49.htm"/>
+         <code value="001"/>
+      </coding>
+   </jurisdiction>
+   <fhirVersion xmlns="" value="4.0.1"/>
+   <kind xmlns="" value="logical"/>
+   <abstract xmlns="" value="false"/>
+   <type xmlns="" value="Interval"/>
+   <baseDefinition xmlns=""
+                   value="http://hl7.org/fhir/uv/genomics-logicalmodel/StructureDefinition/@TBD"/>
+   <derivation xmlns="" value="specialization"/>
+</StructureDefinition>
+<StructureDefinition xmlns="http://hl7.org/fhir">
+   <Id xmlns="" value="EA_Java_Types_Package"/>
+   <text xmlns="">
+      <status value="generated"/>
+      <div xmlns="http://www.w3.org/1999/xhtml">
+         <p>
+            <b>CG EA_Java_Types_Package Logical Model</b>
+         </p>
+         <p>A class to EA_Java_Types_Package model</p>
+      </div>
+   </text>
+   <url xmlns=""
+        value="http://hl7.org/fhir/uv/genomics-logicalmodel/StructureDefinition/EA_Java_Types_Package"/>
+   <version xmlns="" value="0.1.0"/>
+   <name xmlns="" value="EA_Java_Types_Package"/>
+   <title xmlns="" value="CG EA_Java_Types_Package Logical Model"/>
+   <status xmlns="" value="draft"/>
+   <date xmlns="" value="2020-04-01T19:00:00-05:00"/>
+   <publisher xmlns="" value="HL7 International - Clinical Genomics Work Group"/>
+   <contact xmlns="">
+      <telecom>
+         <system value="url"/>
+         <value value="http://hl7.org/Special/committees/[something]"/>
+      </telecom>
+   </contact>
+   <description xmlns="" value="An abstract class to model EA_Java_Types_Package."/>
+   <jurisdiction xmlns="">
+      <coding>
+         <system value="http://unstats.un.org/unsd/methods/m49/m49.htm"/>
+         <code value="001"/>
+      </coding>
+   </jurisdiction>
+   <fhirVersion xmlns="" value="4.0.1"/>
+   <kind xmlns="" value="logical"/>
+   <abstract xmlns="" value="false"/>
+   <type xmlns="" value="EA_Java_Types_Package"/>
+   <baseDefinition xmlns=""
+                   value="http://hl7.org/fhir/uv/genomics-logicalmodel/StructureDefinition/@TBD"/>
+   <derivation xmlns="" value="specialization"/>
+</StructureDefinition>
