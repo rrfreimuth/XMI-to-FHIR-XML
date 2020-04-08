@@ -24,4 +24,6 @@ java -jar target/XSLTTransformer-0.0.1-SNAPSHOT-jar-with-dependencies.jar resour
 ## How to run saxon parser
 ```
 java -jar ./saxon/saxon9he.jar -t -s:resources/EASchemaAssertion.XSD -xsl:resources/ClinGen2Fhir.xsl -o:output.txt
+
+java -jar ./saxon/saxon9he.jar -t -s:resources/EAFullModelNative.xml -xsl:resources/XMI2FHIRXML.xsl
 ```
