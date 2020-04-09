@@ -17,13 +17,13 @@
 
     <xsl:template match="packagedElement">
     <xsl:for-each select="packagedElement[@*[1] = 'uml:Class']"> <!-- qualifies on attribute xmi:type="uml:Class"  -->
-    <!-- hard coding the StructureDefintion like this (instead of using xsl:element)
-         keeps all the child elements from having an empty 'xmlns:' (namespace) tag-->
     <xsl:variable name="filename"
-  		select="concat('output1/',@name,'.xml')" />
+  		select="concat('output/',@name,'.xml')" />
 	<xsl:value-of select="$filename" />  <!-- Creating  -->
 	<xsl:result-document href="{$filename}" format="xml">
-	
+
+    <!-- hard coding the StructureDefintion like this (instead of using xsl:element)
+         keeps all the child elements from having an empty 'xmlns:' (namespace) tag-->
     <StructureDefinition namespace="http://hl7.org/fhir">
       <xsl:element name="id">
     	 	<xsl:attribute name="value">
@@ -100,7 +100,7 @@
 			</xsl:attribute>
     	</xsl:element>
     	<xsl:element name="baseDefinition">
-			<xsl:attribute name="value">http://hl7.org/fhir/uv/genomics-logicalmodel/StructureDefinition/@TBD</xsl:attribute>
+			<xsl:attribute name="value">http://hl7.org/fhir/uv/genomics-logicalmodel/StructureDefinition/<xsl:value-of select="@name"/></xsl:attribute>
     	</xsl:element>
     	    	<xsl:element name="derivation">
 			<xsl:attribute name="value">specialization</xsl:attribute>
