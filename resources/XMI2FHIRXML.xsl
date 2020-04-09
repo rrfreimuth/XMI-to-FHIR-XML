@@ -21,6 +21,7 @@
          keeps all the child elements from having an empty 'xmlns:' (namespace) tag-->
     <xsl:variable name="filename"
   		select="concat('output1/',@name,'.xml')" />
+  	<xsl:variable name="classname" select="@name"/>
 	<xsl:value-of select="$filename" />  <!-- Creating  -->
 	<xsl:result-document href="{$filename}" format="xml">
 	
@@ -102,8 +103,52 @@
     	<xsl:element name="baseDefinition">
 			<xsl:attribute name="value">http://hl7.org/fhir/uv/genomics-logicalmodel/StructureDefinition/@TBD</xsl:attribute>
     	</xsl:element>
-    	    	<xsl:element name="derivation">
+    	<xsl:element name="derivation">
 			<xsl:attribute name="value">specialization</xsl:attribute>
+    	</xsl:element>
+    	<xsl:element name="snapshot">
+    	  <xsl:element name="element">
+			<xsl:attribute name="id"><xsl:value-of select="@name"/></xsl:attribute>
+			<xsl:element name="path">
+				<xsl:attribute name="value"><xsl:value-of select="@name"/></xsl:attribute>
+    		</xsl:element>
+    		<xsl:element name="definition">
+				<xsl:attribute name="value">A class to model <xsl:value-of select="$classname"/></xsl:attribute>
+    		</xsl:element>
+    		<xsl:element name="min">
+				<xsl:attribute name="value">0</xsl:attribute>
+    		</xsl:element>
+    		<xsl:element name="max">
+				<xsl:attribute name="value">*</xsl:attribute>
+    		</xsl:element>
+		  </xsl:element>
+		  <xsl:for-each select="ownedAttribute">
+		  <xsl:element name="element">
+			<xsl:attribute name="id"><xsl:value-of select="concat($classname,'.',@name)"/></xsl:attribute>
+			<xsl:element name="path">
+				<xsl:attribute name="value"><xsl:value-of select="concat($classname,'.',@name)"/></xsl:attribute>
+    		</xsl:element>
+    		<xsl:element name="short">
+				<xsl:attribute name="value">A short definition of a class to model <xsl:value-of select="$classname"/></xsl:attribute>
+    		</xsl:element>
+    		<xsl:element name="definition">
+				<xsl:attribute name="value">A class to model <xsl:value-of select="$classname"/></xsl:attribute>
+    		</xsl:element>
+    		<xsl:element name="min">
+				<xsl:attribute name="value">0</xsl:attribute>
+    		</xsl:element>
+    		<xsl:element name="max">
+				<xsl:attribute name="value">*</xsl:attribute>
+    		</xsl:element>
+    		<xsl:element name="type">
+    			<xsl:element name="code">
+    				<xsl:attribute name="value">
+    						<xsl:value-of select="type/@xmi:idref"/>
+    				</xsl:attribute>
+    		    </xsl:element>
+    		</xsl:element>
+		  </xsl:element>
+		  </xsl:for-each>
     	</xsl:element>
     </StructureDefinition>
     </xsl:result-document>
