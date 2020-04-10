@@ -17,143 +17,142 @@
 
     <xsl:template match="packagedElement">
     <xsl:for-each select="packagedElement[@*[1] = 'uml:Class']"> <!-- qualifies on attribute xmi:type="uml:Class"  -->
-    <xsl:variable name="filename"
-  		select="concat('output/',@name,'.xml')" />
-  	<xsl:variable name="classname" select="@name"/>
+      <xsl:variable name="filename"
+    		select="concat('output/',@name,'.xml')" />
+    	<xsl:variable name="classname" select="@name"/>
 
-	<xsl:value-of select="$filename" />  <!-- Creating  -->
-	<xsl:result-document href="{$filename}" format="xml">
+  	  <xsl:value-of select="$filename" />  <!-- Creating  -->
+    	<xsl:result-document href="{$filename}" format="xml">
 
-    <!-- hard coding the StructureDefintion like this (instead of using xsl:element)
-         keeps all the child elements from having an empty 'xmlns:' (namespace) tag-->
-    <StructureDefinition namespace="http://hl7.org/fhir">
-      <xsl:element name="id">
-    	 	<xsl:attribute name="value">
-    	 	   <xsl:value-of select="@name"/>
-    	 	</xsl:attribute>
-    	</xsl:element>
-    	<xsl:element name="text">
-    		<xsl:element name="status">
-    	 		<xsl:attribute name="value">generated</xsl:attribute>
-    		</xsl:element>
-    		<div xmlns="http://www.w3.org/1999/xhtml">
-  				<p><b>CG <xsl:value-of select="@name"/> Logical Model</b></p>
-  				<p>A class to <xsl:value-of select="@name"/> model</p>
-			</div>
-		</xsl:element>
-		<xsl:element name="url">
-    	 	<xsl:attribute name="value">http://hl7.org/fhir/uv/genomics-logicalmodel/StructureDefinition/<xsl:value-of select="@name"/></xsl:attribute>
-    	</xsl:element>
-		<xsl:element name="version">
-    	 	<xsl:attribute name="value">0.1.0</xsl:attribute>
-    	</xsl:element>
-    	<xsl:element name="name">
-    	 	<xsl:attribute name="value">
-    	 		<xsl:value-of select="@name"/>
-    	 	</xsl:attribute>
-    	</xsl:element>
-    	<xsl:element name="title">
-    	 	<xsl:attribute name="value">CG <xsl:value-of select="@name"/> Logical Model</xsl:attribute>
-    	</xsl:element>
-    	<xsl:element name="status">
-    	 	<xsl:attribute name="value">draft</xsl:attribute>
-    	</xsl:element>
-    	<xsl:element name="date">
-    	 	<xsl:attribute name="value">2020-04-01T19:00:00-05:00</xsl:attribute>
-    	</xsl:element>
-    	<xsl:element name="publisher">
-    	 	<xsl:attribute name="value">HL7 International - Clinical Genomics Work Group</xsl:attribute>
-    	</xsl:element>
-    	 <xsl:element name="contact">
-    	 	<xsl:element name="telecom">
-    	 	    <xsl:element name="system">
-    	 			<xsl:attribute name="value">url</xsl:attribute>
-    			</xsl:element>
-    			<xsl:element name="value">
-    	 			<xsl:attribute name="value">http://hl7.org/Special/committees/[something]</xsl:attribute>
-    			</xsl:element>
-    		</xsl:element>
-    	</xsl:element>
-    	<xsl:element name="description">
-    	 	<xsl:attribute name="value">An abstract class to model <xsl:value-of select="@name"/>.</xsl:attribute>
-    	</xsl:element>
-    	 <xsl:element name="jurisdiction">
-			   <xsl:element name="coding">
-			       	 <xsl:element name="system">
-						<xsl:attribute name="value">http://unstats.un.org/unsd/methods/m49/m49.htm</xsl:attribute>
-    				</xsl:element>
-    				 <xsl:element name="code">
-						<xsl:attribute name="value">001</xsl:attribute>
-    				</xsl:element>
-			   </xsl:element>
-    	</xsl:element>
-    	<xsl:element name="fhirVersion">
-			<xsl:attribute name="value">4.0.1</xsl:attribute>
-    	</xsl:element>
-    	<xsl:element name="kind">
-			<xsl:attribute name="value">logical</xsl:attribute>
-    	</xsl:element>
-    	<xsl:element name="abstract">
-			<xsl:attribute name="value">false</xsl:attribute>
-    	</xsl:element>
-    	<xsl:element name="type">
-			<xsl:attribute name="value">
-				<xsl:value-of select="@name"/>
-			</xsl:attribute>
-    	</xsl:element>
-    	<xsl:element name="baseDefinition">
-			<xsl:attribute name="value">http://hl7.org/fhir/uv/genomics-logicalmodel/StructureDefinition/<xsl:value-of select="@name"/></xsl:attribute>
-    	</xsl:element>
-    	<xsl:element name="derivation">
-			<xsl:attribute name="value">specialization</xsl:attribute>
-    	</xsl:element>
-    	<xsl:element name="snapshot">
-    	  <xsl:element name="element">
-			<xsl:attribute name="id"><xsl:value-of select="@name"/></xsl:attribute>
-			<xsl:element name="path">
-				<xsl:attribute name="value"><xsl:value-of select="@name"/></xsl:attribute>
-    		</xsl:element>
-    		<xsl:element name="definition">
-				<xsl:attribute name="value">A class to model <xsl:value-of select="$classname"/></xsl:attribute>
-    		</xsl:element>
-    		<xsl:element name="min">
-				<xsl:attribute name="value">0</xsl:attribute>
-    		</xsl:element>
-    		<xsl:element name="max">
-				<xsl:attribute name="value">*</xsl:attribute>
-    		</xsl:element>
-		  </xsl:element>
-		  <xsl:for-each select="ownedAttribute">
-		  <xsl:element name="element">
-			<xsl:attribute name="id"><xsl:value-of select="concat($classname,'.',@name)"/></xsl:attribute>
-			<xsl:element name="path">
-				<xsl:attribute name="value"><xsl:value-of select="concat($classname,'.',@name)"/></xsl:attribute>
-    		</xsl:element>
-    		<xsl:element name="short">
-				<xsl:attribute name="value">A short definition of a class to model <xsl:value-of select="$classname"/></xsl:attribute>
-    		</xsl:element>
-    		<xsl:element name="definition">
-				<xsl:attribute name="value">A class to model <xsl:value-of select="$classname"/></xsl:attribute>
-    		</xsl:element>
-    		<xsl:element name="min">
-				<xsl:attribute name="value">0</xsl:attribute>
-    		</xsl:element>
-    		<xsl:element name="max">
-				<xsl:attribute name="value">*</xsl:attribute>
-    		</xsl:element>
-    		<xsl:element name="type">
-    			<xsl:element name="code">
-    				<xsl:attribute name="value">
-    						<xsl:value-of select="type/@xmi:idref"/>
-    				</xsl:attribute>
-    		    </xsl:element>
-    		</xsl:element>
-		  </xsl:element>
-		  </xsl:for-each>
-    	</xsl:element>
-    </StructureDefinition>
-    </xsl:result-document>
-
+      <!-- hard coding the StructureDefintion like this (instead of using xsl:element)
+           keeps all the child elements from having an empty 'xmlns:' (namespace) tag-->
+      <StructureDefinition namespace="http://hl7.org/fhir">
+        <xsl:element name="id">
+      	 	<xsl:attribute name="value">
+      	 	   <xsl:value-of select="@name"/>
+      	 	</xsl:attribute>
+      	</xsl:element>
+      	<xsl:element name="text">
+      		<xsl:element name="status">
+      	 		<xsl:attribute name="value">generated</xsl:attribute>
+      		</xsl:element>
+      		<div xmlns="http://www.w3.org/1999/xhtml">
+    				<p><b>CG <xsl:value-of select="@name"/> Logical Model</b></p>
+    				<p>A class to model <xsl:value-of select="@name"/></p>
+  			</div>
+  		</xsl:element>
+  		<xsl:element name="url">
+      	 	<xsl:attribute name="value">http://hl7.org/fhir/uv/genomics-logicalmodel/StructureDefinition/<xsl:value-of select="@name"/></xsl:attribute>
+      	</xsl:element>
+  		<xsl:element name="version">
+      	 	<xsl:attribute name="value">0.1.0</xsl:attribute>
+      	</xsl:element>
+      	<xsl:element name="name">
+      	 	<xsl:attribute name="value">
+      	 		<xsl:value-of select="@name"/>
+      	 	</xsl:attribute>
+      	</xsl:element>
+      	<xsl:element name="title">
+      	 	<xsl:attribute name="value">CG <xsl:value-of select="@name"/> Logical Model</xsl:attribute>
+      	</xsl:element>
+      	<xsl:element name="status">
+      	 	<xsl:attribute name="value">draft</xsl:attribute>
+      	</xsl:element>
+      	<xsl:element name="date">
+      	 	<xsl:attribute name="value">2020-04-01T19:00:00-05:00</xsl:attribute>
+      	</xsl:element>
+      	<xsl:element name="publisher">
+      	 	<xsl:attribute name="value">HL7 International - Clinical Genomics Work Group</xsl:attribute>
+      	</xsl:element>
+      	 <xsl:element name="contact">
+      	 	<xsl:element name="telecom">
+      	 	    <xsl:element name="system">
+      	 			<xsl:attribute name="value">url</xsl:attribute>
+      			</xsl:element>
+      			<xsl:element name="value">
+      	 			<xsl:attribute name="value">https://confluence.hl7.org/display/CGW/WorkGroup+Home</xsl:attribute>
+      			</xsl:element>
+      		</xsl:element>
+      	</xsl:element>
+      	<xsl:element name="description">
+      	 	<xsl:attribute name="value">Model <xsl:value-of select="@name"/></xsl:attribute>
+      	</xsl:element>
+      	 <xsl:element name="jurisdiction">
+  			   <xsl:element name="coding">
+  			       	 <xsl:element name="system">
+  						<xsl:attribute name="value">http://unstats.un.org/unsd/methods/m49/m49.htm</xsl:attribute>
+      				</xsl:element>
+      				 <xsl:element name="code">
+  						<xsl:attribute name="value">001</xsl:attribute>
+      				</xsl:element>
+  			   </xsl:element>
+      	</xsl:element>
+      	<xsl:element name="fhirVersion">
+  			<xsl:attribute name="value">4.0.1</xsl:attribute>
+      	</xsl:element>
+      	<xsl:element name="kind">
+  			<xsl:attribute name="value">logical</xsl:attribute>
+      	</xsl:element>
+      	<xsl:element name="abstract">
+  			<xsl:attribute name="value">false</xsl:attribute>
+      	</xsl:element>
+      	<xsl:element name="type">
+  			<xsl:attribute name="value">
+  				<xsl:value-of select="@name"/>
+  			</xsl:attribute>
+      	</xsl:element>
+      	<xsl:element name="baseDefinition">
+  			<xsl:attribute name="value">http://hl7.org/fhir/uv/genomics-logicalmodel/StructureDefinition/<xsl:value-of select="@name"/></xsl:attribute>
+      	</xsl:element>
+      	<xsl:element name="derivation">
+  			<xsl:attribute name="value">specialization</xsl:attribute>
+      	</xsl:element>
+      	<xsl:element name="snapshot">
+      	  <xsl:element name="element">
+  			<xsl:attribute name="id"><xsl:value-of select="@name"/></xsl:attribute>
+  			<xsl:element name="path">
+  				<xsl:attribute name="value"><xsl:value-of select="@name"/></xsl:attribute>
+      		</xsl:element>
+      		<xsl:element name="definition">
+  				<xsl:attribute name="value">Model <xsl:value-of select="$classname"/></xsl:attribute>
+      		</xsl:element>
+      		<xsl:element name="min">
+  				<xsl:attribute name="value">0</xsl:attribute>
+      		</xsl:element>
+      		<xsl:element name="max">
+  				<xsl:attribute name="value">*</xsl:attribute>
+      		</xsl:element>
+  		  </xsl:element>
+  		  <xsl:for-each select="ownedAttribute">
+    		  <xsl:element name="element">
+    			<xsl:attribute name="id"><xsl:value-of select="concat($classname,'.',@name)"/></xsl:attribute>
+    			<xsl:element name="path">
+    				<xsl:attribute name="value"><xsl:value-of select="concat($classname,'.',@name)"/></xsl:attribute>
+        		</xsl:element>
+        		<xsl:element name="short">
+    				<xsl:attribute name="value">Short definition of attribute <xsl:value-of select="@name"/></xsl:attribute>
+        		</xsl:element>
+        		<xsl:element name="definition">
+    				<xsl:attribute name="value">Definition of attribute <xsl:value-of select="@name"/></xsl:attribute>
+        		</xsl:element>
+        		<xsl:element name="min">
+    				<xsl:attribute name="value">0</xsl:attribute>
+        		</xsl:element>
+        		<xsl:element name="max">
+    				<xsl:attribute name="value">*</xsl:attribute>
+        		</xsl:element>
+        		<xsl:element name="type">
+        			<xsl:element name="code">
+        				<xsl:attribute name="value">
+        						<xsl:value-of select="substring(type/@*[1],8)"/>
+        				</xsl:attribute>
+        		    </xsl:element>
+        		</xsl:element>
+    		  </xsl:element>
+  		  </xsl:for-each>
+      	</xsl:element>
+      </StructureDefinition>
+      </xsl:result-document>
     </xsl:for-each>
     </xsl:template>
 </xsl:stylesheet>
