@@ -26,7 +26,7 @@
 
       <!-- hard coding the StructureDefintion like this (instead of using xsl:element)
            keeps all the child elements from having an empty 'xmlns:' (namespace) tag-->
-      <StructureDefinition namespace="http://hl7.org/fhir">
+      <StructureDefinition xmlns="http://hl7.org/fhir">
         <xsl:element name="id">
       	 	<xsl:attribute name="value">
       	 	   <xsl:value-of select="@name"/>
