@@ -101,13 +101,14 @@
   				<xsl:value-of select="@name"/>
   			</xsl:attribute>
       	</xsl:element>
+        <!-- For now, have all models have a base of Element -->
       	<xsl:element name="baseDefinition">
-  			<xsl:attribute name="value">http://hl7.org/fhir/uv/genomics-logicalmodel/StructureDefinition/<xsl:value-of select="@name"/></xsl:attribute>
+  			<xsl:attribute name="value">http://hl7.org/fhir/StructureDefinition/Element</xsl:attribute>
       	</xsl:element>
       	<xsl:element name="derivation">
   			<xsl:attribute name="value">specialization</xsl:attribute>
       	</xsl:element>
-      	<xsl:element name="snapshot">
+      	<xsl:element name="differential">
       	  <xsl:element name="element">
   			<xsl:attribute name="id"><xsl:value-of select="@name"/></xsl:attribute>
   			<xsl:element name="path">
