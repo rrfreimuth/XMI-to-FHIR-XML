@@ -1,4 +1,7 @@
-
+.classpath
+.project
+/.settings/
+/bin/
 saxon/.DS_Store
 .DS_Store
 output/

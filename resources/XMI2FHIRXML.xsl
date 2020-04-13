@@ -19,7 +19,7 @@
     <xsl:for-each select="packagedElement[@*[1] = 'uml:Class']"> <!-- qualifies on attribute xmi:type="uml:Class"  -->
       <xsl:variable name="filename"
     		select="concat('output/',@name,'.xml')" />
-    	<xsl:variable name="classname" select="@name"/>
+    <xsl:variable name="classname" select="@name"/>
 
   	  <xsl:value-of select="$filename" />  <!-- Creating  -->
     	<xsl:result-document href="{$filename}" format="xml">
@@ -125,16 +125,27 @@
       		</xsl:element>
   		  </xsl:element>
   		  <xsl:for-each select="ownedAttribute">
+  		  <xsl:variable name="elementName">
+  		  <xsl:choose>
+  		  	<xsl:when test="@name">
+  		  		<xsl:value-of select="@*[3]"/>
+  		  	</xsl:when>
+  		  	<xsl:when test="@association">
+  		  		<xsl:variable name="assocGuid"><xsl:value-of select="@*[3]"/></xsl:variable>
+  		  		<xsl:value-of select="//packagedElement[@*[2]=$assocGuid]/@name"/>
+  		  	</xsl:when>
+  		  </xsl:choose>
+  		  </xsl:variable>
     		  <xsl:element name="element">
-    			<xsl:attribute name="id"><xsl:value-of select="concat($classname,'.',@name)"/></xsl:attribute>
+    		  <xsl:attribute name="id"><xsl:value-of select="concat($classname,'.',$elementName)"/></xsl:attribute>
     			<xsl:element name="path">
-    				<xsl:attribute name="value"><xsl:value-of select="concat($classname,'.',@name)"/></xsl:attribute>
+    				<xsl:attribute name="value"><xsl:value-of select="concat($classname,'.',$elementName)"/></xsl:attribute>
         		</xsl:element>
         		<xsl:element name="short">
-    				<xsl:attribute name="value">Short definition of attribute <xsl:value-of select="@name"/></xsl:attribute>
+    				<xsl:attribute name="value">Short definition of attribute <xsl:value-of select="$elementName"/></xsl:attribute>
         		</xsl:element>
         		<xsl:element name="definition">
-    				<xsl:attribute name="value">Definition of attribute <xsl:value-of select="@name"/></xsl:attribute>
+    				<xsl:attribute name="value">Definition of attribute <xsl:value-of select="$elementName"/></xsl:attribute>
         		</xsl:element>
         		<xsl:element name="min">
     				<xsl:attribute name="value"><xsl:value-of select="lowerValue/@value"/></xsl:attribute>
