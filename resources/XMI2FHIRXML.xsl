@@ -137,10 +137,10 @@
     				<xsl:attribute name="value">Definition of attribute <xsl:value-of select="@name"/></xsl:attribute>
         		</xsl:element>
         		<xsl:element name="min">
-    				<xsl:attribute name="value">0</xsl:attribute>
+    				<xsl:attribute name="value"><xsl:value-of select="lowerValue/@value"/></xsl:attribute>
         		</xsl:element>
         		<xsl:element name="max">
-    				<xsl:attribute name="value">*</xsl:attribute>
+    				<xsl:attribute name="value"><xsl:value-of select="upperValue/@value"/></xsl:attribute>
         		</xsl:element>
         		<xsl:element name="type">
         			<xsl:element name="code">
