@@ -125,13 +125,17 @@
       		</xsl:element>
   		  </xsl:element>
   		  <xsl:for-each select="ownedAttribute">
+  		  <xsl:variable name="assocGuid">
+  		  	<xsl:if test="@association">
+  		  		<xsl:value-of select="@*[3]"/>
+  		  	</xsl:if>
+  		  </xsl:variable>
   		  <xsl:variable name="elementName">
   		  <xsl:choose>
   		  	<xsl:when test="@name">
   		  		<xsl:value-of select="@*[3]"/>
   		  	</xsl:when>
   		  	<xsl:when test="@association">
-  		  		<xsl:variable name="assocGuid"><xsl:value-of select="@*[3]"/></xsl:variable>
   		  		<xsl:value-of select="//packagedElement[@*[2]=$assocGuid]/@name"/>
   		  	</xsl:when>
   		  </xsl:choose>
@@ -155,10 +159,26 @@
         		</xsl:element>
         		<xsl:element name="type">
         			<xsl:element name="code">
-        				<xsl:attribute name="value">
+        			<xsl:choose>
+        			    <xsl:when test="@name">
+        			    	<xsl:attribute name="value">
         						<xsl:value-of select="substring(type/@*[1],8)"/>
-        				</xsl:attribute>
-        		    </xsl:element>
+        					</xsl:attribute>
+        				</xsl:when>
+        				<xsl:when test="@association">
+        					<xsl:attribute name="value">Reference</xsl:attribute>
+        				</xsl:when>
+        			</xsl:choose>
+        			</xsl:element>
+        			<xsl:if test="@association">
+        			<xsl:element name="targetProfile">
+        				     <xsl:attribute name="value">
+        						<xsl:variable name="propertyGuid">
+        						<xsl:value-of select="//packagedElement[@*[2]=$assocGuid]/ownedEnd/type/@*[1]"/>
+        						</xsl:variable>http://hl7.org/fhir/uv/genomics-logicalmodel/StructureDefinition/<xsl:value-of select="//ownedAttribute/type[@*[1]=$propertyGuid]/../../@name"/>
+  		  					</xsl:attribute>
+        			</xsl:element>
+        			</xsl:if>
         		</xsl:element>
     		  </xsl:element>
   		  </xsl:for-each>
