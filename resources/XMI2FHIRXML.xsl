@@ -19,10 +19,9 @@
     <xsl:for-each select="packagedElement[@*[1] = 'uml:Class']"> <!-- qualifies on attribute xmi:type="uml:Class"  -->
       <xsl:variable name="filename"
     		select="concat('output/',@name,'.xml')" />
-    <xsl:variable name="classname" select="@name"/>
-
+      <xsl:variable name="classname" select="@name"/>
   	  <xsl:value-of select="$filename" />  <!-- Creating  -->
-    	<xsl:result-document href="{$filename}" format="xml">
+      <xsl:result-document href="{$filename}" format="xml">
 
       <!-- hard coding the StructureDefintion like this (instead of using xsl:element)
            keeps all the child elements from having an empty 'xmlns:' (namespace) tag-->
@@ -140,6 +139,9 @@
   		  	</xsl:when>
   		  </xsl:choose>
   		  </xsl:variable>
+  		  <xsl:variable name="propertyGuid">
+        	<xsl:value-of select="//packagedElement[@*[2]=$assocGuid]/ownedEnd/type/@*[1]"/>
+          </xsl:variable>
     		  <xsl:element name="element">
     		  <xsl:attribute name="id"><xsl:value-of select="concat($classname,'.',$elementName)"/></xsl:attribute>
     			<xsl:element name="path">
@@ -151,12 +153,28 @@
         		<xsl:element name="definition">
     				<xsl:attribute name="value">Definition of attribute <xsl:value-of select="$elementName"/></xsl:attribute>
         		</xsl:element>
-        		<xsl:element name="min">
-    				<xsl:attribute name="value"><xsl:value-of select="lowerValue/@value"/></xsl:attribute>
-        		</xsl:element>
-        		<xsl:element name="max">
-    				<xsl:attribute name="value"><xsl:value-of select="upperValue/@value"/></xsl:attribute>
-        		</xsl:element>
+        		<xsl:choose>
+        			<xsl:when test="@name">
+        			    <xsl:element name="min">
+    						<xsl:attribute name="value"><xsl:value-of select="lowerValue/@value"/></xsl:attribute>
+        				</xsl:element>
+        				<xsl:element name="max">
+    						<xsl:attribute name="value"><xsl:value-of select="upperValue/@value"/></xsl:attribute>
+        				</xsl:element>
+        			</xsl:when>
+        			<xsl:when test="@association">
+        			    <xsl:element name="min">
+    						<xsl:attribute name="value">
+    							<xsl:value-of select="//packagedElement[@*[2]=$assocGuid]/ownedEnd/lowerValue/@value"/>
+    						</xsl:attribute>
+        				</xsl:element>
+        				<xsl:element name="max">
+    						<xsl:attribute name="value">
+    							<xsl:value-of select="//packagedElement[@*[2]=$assocGuid]/ownedEnd/upperValue/@value"/>
+    						</xsl:attribute>
+        				</xsl:element>
+        			</xsl:when>
+        		</xsl:choose>
         		<xsl:element name="type">
         			<xsl:element name="code">
         			<xsl:choose>
@@ -172,11 +190,7 @@
         			</xsl:element>
         			<xsl:if test="@association">
         			<xsl:element name="targetProfile">
-        				     <xsl:attribute name="value">
-        						<xsl:variable name="propertyGuid">
-        						<xsl:value-of select="//packagedElement[@*[2]=$assocGuid]/ownedEnd/type/@*[1]"/>
-        						</xsl:variable>http://hl7.org/fhir/uv/genomics-logicalmodel/StructureDefinition/<xsl:value-of select="//ownedAttribute/type[@*[1]=$propertyGuid]/../../@name"/>
-  		  					</xsl:attribute>
+        				<xsl:attribute name="value">http://hl7.org/fhir/uv/genomics-logicalmodel/StructureDefinition/<xsl:value-of select="//ownedAttribute/type[@*[1]=$propertyGuid]/../../@name"/></xsl:attribute>
         			</xsl:element>
         			</xsl:if>
         		</xsl:element>
