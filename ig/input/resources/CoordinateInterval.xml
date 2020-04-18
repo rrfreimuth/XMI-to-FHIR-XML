@@ -47,8 +47,8 @@
          <path value="CoordinateInterval.end"/>
          <short value="Short definition of attribute end"/>
          <definition value="Definition of attribute end"/>
-         <min value="0"/>
-         <max value="*"/>
+         <min value="1"/>
+         <max value="1"/>
          <type>
             <code value="int"/>
          </type>
@@ -57,8 +57,8 @@
          <path value="CoordinateInterval.numberingSystem"/>
          <short value="Short definition of attribute numberingSystem"/>
          <definition value="Definition of attribute numberingSystem"/>
-         <min value="0"/>
-         <max value="*"/>
+         <min value="1"/>
+         <max value="1"/>
          <type>
             <code value="code"/>
          </type>
@@ -67,8 +67,8 @@
          <path value="CoordinateInterval.start"/>
          <short value="Short definition of attribute start"/>
          <definition value="Definition of attribute start"/>
-         <min value="0"/>
-         <max value="*"/>
+         <min value="1"/>
+         <max value="1"/>
          <type>
             <code value="int"/>
          </type>

@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<StructureDefinition xmlns="http://hl7.org/fhir">
+   <id value="SequenceEdit"/>
+   <text>
+      <status value="generated"/>
+      <div xmlns="http://www.w3.org/1999/xhtml">
+         <p>
+            <b>CG SequenceEdit Logical Model</b>
+         </p>
+         <p>A class to model SequenceEdit</p>
+      </div>
+   </text>
+   <url value="http://hl7.org/fhir/uv/genomics-logicalmodel/StructureDefinition/SequenceEdit"/>
+   <version value="0.1.0"/>
+   <name value="SequenceEdit"/>
+   <title value="CG SequenceEdit Logical Model"/>
+   <status value="draft"/>
+   <date value="2020-04-01T19:00:00-05:00"/>
+   <publisher value="HL7 International - Clinical Genomics Work Group"/>
+   <contact>
+      <telecom>
+         <system value="url"/>
+         <value value="https://confluence.hl7.org/display/CGW/WorkGroup+Home"/>
+      </telecom>
+   </contact>
+   <description value="Model SequenceEdit"/>
+   <jurisdiction>
+      <coding>
+         <system value="http://unstats.un.org/unsd/methods/m49/m49.htm"/>
+         <code value="001"/>
+      </coding>
+   </jurisdiction>
+   <fhirVersion value="4.0.1"/>
+   <kind value="logical"/>
+   <abstract value="false"/>
+   <type value="SequenceEdit"/>
+   <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Element"/>
+   <derivation value="specialization"/>
+   <differential>
+      <element id="SequenceEdit">
+         <path value="SequenceEdit"/>
+         <definition value="Model SequenceEdit"/>
+         <min value="0"/>
+         <max value="*"/>
+      </element>
+      <element id="SequenceEdit.interval">
+         <path value="SequenceEdit.interval"/>
+         <short value="Short definition of attribute interval"/>
+         <definition value="Definition of attribute interval"/>
+         <min value="1"/>
+         <max value="1"/>
+         <type>
+            <code value="CoordinateInterval"/>
+         </type>
+      </element>
+      <element id="SequenceEdit.replacedSequence">
+         <path value="SequenceEdit.replacedSequence"/>
+         <short value="Short definition of attribute replacedSequence"/>
+         <definition value="Definition of attribute replacedSequence"/>
+         <min value="0"/>
+         <max value="1"/>
+         <type>
+            <code value="Sequence"/>
+         </type>
+      </element>
+      <element id="SequenceEdit.replacementSequence">
+         <path value="SequenceEdit.replacementSequence"/>
+         <short value="Short definition of attribute replacementSequence"/>
+         <definition value="Definition of attribute replacementSequence"/>
+         <min value="1"/>
+         <max value="1"/>
+         <type>
+            <code value="Sequence"/>
+         </type>
+      </element>
+      <element id="SequenceEdit.composedOf">
+         <path value="SequenceEdit.composedOf"/>
+         <short value="Short definition of attribute composedOf"/>
+         <definition value="Definition of attribute composedOf"/>
+         <min value="1"/>
+         <max value="*"/>
+         <type>
+            <code value="Reference"/>
+            <targetProfile value="http://hl7.org/fhir/uv/genomics-logicalmodel/StructureDefinition/"/>
+         </type>
+      </element>
+   </differential>
+</StructureDefinition>

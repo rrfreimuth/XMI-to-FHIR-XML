@@ -1,6 +1,6 @@
 -------------------------------------------------------------------------------------
 {"code" : {
-  "code" : "genomics-Interval-model"
+  "code" : "Interval"
 }, "valueSet" :{
   "resourceType" : "ValueSet",
   "compose" : {
@@ -15,7 +15,7 @@
 v: {
   "display" : "",
   "severity" : "error",
-  "error" : "The code system \"\" is not known (encountered paired with code = \"genomics-Interval-model\"); The code provided (#genomics-Interval-model) is not  valid in the value set FHIRDefinedType"
+  "error" : "The code system \"\" is not known (encountered paired with code = \"Interval\"); The code provided (#Interval) is not  valid in the value set FHIRDefinedType"
 }
 -------------------------------------------------------------------------------------
 {"code" : {
@@ -38,139 +38,6 @@ v: {
 }
 -------------------------------------------------------------------------------------
 {"code" : {
-  "code" : "genomics-CoordinateInterval-model"
-}, "valueSet" :{
-  "resourceType" : "ValueSet",
-  "compose" : {
-    "include" : [{
-      "system" : "http://hl7.org/fhir/data-types"
-    },
-    {
-      "system" : "http://hl7.org/fhir/resource-types"
-    }]
-  }
-}, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"true", "valueSetMode":"ALL_CHECKS"}####
-v: {
-  "display" : "",
-  "severity" : "error",
-  "error" : "The code system \"\" is not known (encountered paired with code = \"genomics-CoordinateInterval-model\"); The code provided (#genomics-CoordinateInterval-model) is not  valid in the value set FHIRDefinedType"
-}
--------------------------------------------------------------------------------------
-{"code" : {
-  "code" : "interval"
-}, "valueSet" :{
-  "resourceType" : "ValueSet",
-  "compose" : {
-    "include" : [{
-      "system" : "http://hl7.org/fhir/data-types"
-    },
-    {
-      "system" : "http://hl7.org/fhir/resource-types"
-    }]
-  }
-}, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"true", "valueSetMode":"ALL_CHECKS"}####
-v: {
-  "display" : "",
-  "severity" : "error",
-  "error" : "The code system \"\" is not known (encountered paired with code = \"interval\"); The code provided (#interval) is not  valid in the value set FHIRDefinedType"
-}
--------------------------------------------------------------------------------------
-{"code" : {
-  "code" : "coordinateinterval"
-}, "valueSet" :{
-  "resourceType" : "ValueSet",
-  "compose" : {
-    "include" : [{
-      "system" : "http://hl7.org/fhir/data-types"
-    },
-    {
-      "system" : "http://hl7.org/fhir/resource-types"
-    }]
-  }
-}, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"true", "valueSetMode":"ALL_CHECKS"}####
-v: {
-  "display" : "",
-  "severity" : "error",
-  "error" : "The code system \"\" is not known (encountered paired with code = \"coordinateinterval\"); The code provided (#coordinateinterval) is not  valid in the value set FHIRDefinedType"
-}
--------------------------------------------------------------------------------------
-{"code" : {
-  "code" : "base-interval"
-}, "valueSet" :{
-  "resourceType" : "ValueSet",
-  "compose" : {
-    "include" : [{
-      "system" : "http://hl7.org/fhir/data-types"
-    },
-    {
-      "system" : "http://hl7.org/fhir/resource-types"
-    }]
-  }
-}, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"true", "valueSetMode":"ALL_CHECKS"}####
-v: {
-  "display" : "",
-  "severity" : "error",
-  "error" : "The code system \"\" is not known (encountered paired with code = \"base-interval\"); The code provided (#base-interval) is not  valid in the value set FHIRDefinedType"
-}
--------------------------------------------------------------------------------------
-{"code" : {
-  "code" : "coordinate-interval"
-}, "valueSet" :{
-  "resourceType" : "ValueSet",
-  "compose" : {
-    "include" : [{
-      "system" : "http://hl7.org/fhir/data-types"
-    },
-    {
-      "system" : "http://hl7.org/fhir/resource-types"
-    }]
-  }
-}, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"true", "valueSetMode":"ALL_CHECKS"}####
-v: {
-  "display" : "",
-  "severity" : "error",
-  "error" : "The code system \"\" is not known (encountered paired with code = \"coordinate-interval\"); The code provided (#coordinate-interval) is not  valid in the value set FHIRDefinedType"
-}
--------------------------------------------------------------------------------------
-{"code" : {
-  "code" : "baseinterval"
-}, "valueSet" :{
-  "resourceType" : "ValueSet",
-  "compose" : {
-    "include" : [{
-      "system" : "http://hl7.org/fhir/data-types"
-    },
-    {
-      "system" : "http://hl7.org/fhir/resource-types"
-    }]
-  }
-}, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"true", "valueSetMode":"ALL_CHECKS"}####
-v: {
-  "display" : "",
-  "severity" : "error",
-  "error" : "The code system \"\" is not known (encountered paired with code = \"baseinterval\"); The code provided (#baseinterval) is not  valid in the value set FHIRDefinedType"
-}
--------------------------------------------------------------------------------------
-{"code" : {
-  "code" : "Interval"
-}, "valueSet" :{
-  "resourceType" : "ValueSet",
-  "compose" : {
-    "include" : [{
-      "system" : "http://hl7.org/fhir/data-types"
-    },
-    {
-      "system" : "http://hl7.org/fhir/resource-types"
-    }]
-  }
-}, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"true", "valueSetMode":"ALL_CHECKS"}####
-v: {
-  "display" : "",
-  "severity" : "error",
-  "error" : "The code system \"\" is not known (encountered paired with code = \"Interval\"); The code provided (#Interval) is not  valid in the value set FHIRDefinedType"
-}
--------------------------------------------------------------------------------------
-{"code" : {
   "code" : "CoordinateInterval"
 }, "valueSet" :{
   "resourceType" : "ValueSet",
@@ -190,25 +57,6 @@ v: {
 }
 -------------------------------------------------------------------------------------
 {"code" : {
-  "code" : "IntervalBase"
-}, "valueSet" :{
-  "resourceType" : "ValueSet",
-  "compose" : {
-    "include" : [{
-      "system" : "http://hl7.org/fhir/data-types"
-    },
-    {
-      "system" : "http://hl7.org/fhir/resource-types"
-    }]
-  }
-}, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"true", "valueSetMode":"ALL_CHECKS"}####
-v: {
-  "display" : "",
-  "severity" : "error",
-  "error" : "The code system \"\" is not known (encountered paired with code = \"IntervalBase\"); The code provided (#IntervalBase) is not  valid in the value set FHIRDefinedType"
-}
--------------------------------------------------------------------------------------
-{"code" : {
   "code" : "int"
 }, "valueSet" :{
   "resourceType" : "ValueSet",
@@ -225,5 +73,195 @@ v: {
   "display" : "",
   "severity" : "error",
   "error" : "The code system \"\" is not known (encountered paired with code = \"int\"); The code provided (#int) is not  valid in the value set FHIRDefinedType"
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "code" : "Sequence"
+}, "valueSet" :{
+  "resourceType" : "ValueSet",
+  "compose" : {
+    "include" : [{
+      "system" : "http://hl7.org/fhir/data-types"
+    },
+    {
+      "system" : "http://hl7.org/fhir/resource-types"
+    }]
+  }
+}, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"true", "valueSetMode":"ALL_CHECKS"}####
+v: {
+  "display" : "",
+  "severity" : "error",
+  "error" : "The code system \"\" is not known (encountered paired with code = \"Sequence\"); The code provided (#Sequence) is not  valid in the value set FHIRDefinedType"
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "code" : "FormattedSequence"
+}, "valueSet" :{
+  "resourceType" : "ValueSet",
+  "compose" : {
+    "include" : [{
+      "system" : "http://hl7.org/fhir/data-types"
+    },
+    {
+      "system" : "http://hl7.org/fhir/resource-types"
+    }]
+  }
+}, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"true", "valueSetMode":"ALL_CHECKS"}####
+v: {
+  "display" : "",
+  "severity" : "error",
+  "error" : "The code system \"\" is not known (encountered paired with code = \"FormattedSequence\"); The code provided (#FormattedSequence) is not  valid in the value set FHIRDefinedType"
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "code" : "Attachments"
+}, "valueSet" :{
+  "resourceType" : "ValueSet",
+  "compose" : {
+    "include" : [{
+      "system" : "http://hl7.org/fhir/data-types"
+    },
+    {
+      "system" : "http://hl7.org/fhir/resource-types"
+    }]
+  }
+}, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"true", "valueSetMode":"ALL_CHECKS"}####
+v: {
+  "display" : "",
+  "severity" : "error",
+  "error" : "The code system \"\" is not known (encountered paired with code = \"Attachments\"); The code provided (#Attachments) is not  valid in the value set FHIRDefinedType"
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "code" : "SequenceRepresentation"
+}, "valueSet" :{
+  "resourceType" : "ValueSet",
+  "compose" : {
+    "include" : [{
+      "system" : "http://hl7.org/fhir/data-types"
+    },
+    {
+      "system" : "http://hl7.org/fhir/resource-types"
+    }]
+  }
+}, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"true", "valueSetMode":"ALL_CHECKS"}####
+v: {
+  "display" : "",
+  "severity" : "error",
+  "error" : "The code system \"\" is not known (encountered paired with code = \"SequenceRepresentation\"); The code provided (#SequenceRepresentation) is not  valid in the value set FHIRDefinedType"
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "code" : "GenomeAssembly"
+}, "valueSet" :{
+  "resourceType" : "ValueSet",
+  "compose" : {
+    "include" : [{
+      "system" : "http://hl7.org/fhir/data-types"
+    },
+    {
+      "system" : "http://hl7.org/fhir/resource-types"
+    }]
+  }
+}, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"true", "valueSetMode":"ALL_CHECKS"}####
+v: {
+  "display" : "",
+  "severity" : "error",
+  "error" : "The code system \"\" is not known (encountered paired with code = \"GenomeAssembly\"); The code provided (#GenomeAssembly) is not  valid in the value set FHIRDefinedType"
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "code" : "SimpleSequence"
+}, "valueSet" :{
+  "resourceType" : "ValueSet",
+  "compose" : {
+    "include" : [{
+      "system" : "http://hl7.org/fhir/data-types"
+    },
+    {
+      "system" : "http://hl7.org/fhir/resource-types"
+    }]
+  }
+}, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"true", "valueSetMode":"ALL_CHECKS"}####
+v: {
+  "display" : "",
+  "severity" : "error",
+  "error" : "The code system \"\" is not known (encountered paired with code = \"SimpleSequence\"); The code provided (#SimpleSequence) is not  valid in the value set FHIRDefinedType"
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "code" : "SequenceEdit"
+}, "valueSet" :{
+  "resourceType" : "ValueSet",
+  "compose" : {
+    "include" : [{
+      "system" : "http://hl7.org/fhir/data-types"
+    },
+    {
+      "system" : "http://hl7.org/fhir/resource-types"
+    }]
+  }
+}, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"true", "valueSetMode":"ALL_CHECKS"}####
+v: {
+  "display" : "",
+  "severity" : "error",
+  "error" : "The code system \"\" is not known (encountered paired with code = \"SequenceEdit\"); The code provided (#SequenceEdit) is not  valid in the value set FHIRDefinedType"
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "code" : "RelativeSequence"
+}, "valueSet" :{
+  "resourceType" : "ValueSet",
+  "compose" : {
+    "include" : [{
+      "system" : "http://hl7.org/fhir/data-types"
+    },
+    {
+      "system" : "http://hl7.org/fhir/resource-types"
+    }]
+  }
+}, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"true", "valueSetMode":"ALL_CHECKS"}####
+v: {
+  "display" : "",
+  "severity" : "error",
+  "error" : "The code system \"\" is not known (encountered paired with code = \"RelativeSequence\"); The code provided (#RelativeSequence) is not  valid in the value set FHIRDefinedType"
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "code" : "Class1"
+}, "valueSet" :{
+  "resourceType" : "ValueSet",
+  "compose" : {
+    "include" : [{
+      "system" : "http://hl7.org/fhir/data-types"
+    },
+    {
+      "system" : "http://hl7.org/fhir/resource-types"
+    }]
+  }
+}, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"true", "valueSetMode":"ALL_CHECKS"}####
+v: {
+  "display" : "",
+  "severity" : "error",
+  "error" : "The code system \"\" is not known (encountered paired with code = \"Class1\"); The code provided (#Class1) is not  valid in the value set FHIRDefinedType"
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "code" : "Class2"
+}, "valueSet" :{
+  "resourceType" : "ValueSet",
+  "compose" : {
+    "include" : [{
+      "system" : "http://hl7.org/fhir/data-types"
+    },
+    {
+      "system" : "http://hl7.org/fhir/resource-types"
+    }]
+  }
+}, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"true", "valueSetMode":"ALL_CHECKS"}####
+v: {
+  "display" : "",
+  "severity" : "error",
+  "error" : "The code system \"\" is not known (encountered paired with code = \"Class2\"); The code provided (#Class2) is not  valid in the value set FHIRDefinedType"
 }
 -------------------------------------------------------------------------------------

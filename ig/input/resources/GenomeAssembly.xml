@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<StructureDefinition xmlns="http://hl7.org/fhir">
+   <id value="GenomeAssembly"/>
+   <text>
+      <status value="generated"/>
+      <div xmlns="http://www.w3.org/1999/xhtml">
+         <p>
+            <b>CG GenomeAssembly Logical Model</b>
+         </p>
+         <p>A class to model GenomeAssembly</p>
+      </div>
+   </text>
+   <url value="http://hl7.org/fhir/uv/genomics-logicalmodel/StructureDefinition/GenomeAssembly"/>
+   <version value="0.1.0"/>
+   <name value="GenomeAssembly"/>
+   <title value="CG GenomeAssembly Logical Model"/>
+   <status value="draft"/>
+   <date value="2020-04-01T19:00:00-05:00"/>
+   <publisher value="HL7 International - Clinical Genomics Work Group"/>
+   <contact>
+      <telecom>
+         <system value="url"/>
+         <value value="https://confluence.hl7.org/display/CGW/WorkGroup+Home"/>
+      </telecom>
+   </contact>
+   <description value="Model GenomeAssembly"/>
+   <jurisdiction>
+      <coding>
+         <system value="http://unstats.un.org/unsd/methods/m49/m49.htm"/>
+         <code value="001"/>
+      </coding>
+   </jurisdiction>
+   <fhirVersion value="4.0.1"/>
+   <kind value="logical"/>
+   <abstract value="false"/>
+   <type value="GenomeAssembly"/>
+   <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Element"/>
+   <derivation value="specialization"/>
+   <differential>
+      <element id="GenomeAssembly">
+         <path value="GenomeAssembly"/>
+         <definition value="Model GenomeAssembly"/>
+         <min value="0"/>
+         <max value="*"/>
+      </element>
+      <element id="GenomeAssembly.accession">
+         <path value="GenomeAssembly.accession"/>
+         <short value="Short definition of attribute accession"/>
+         <definition value="Definition of attribute accession"/>
+         <min value="0"/>
+         <max value="1"/>
+         <type>
+            <code value="CodeableConcept"/>
+         </type>
+      </element>
+      <element id="GenomeAssembly.build">
+         <path value="GenomeAssembly.build"/>
+         <short value="Short definition of attribute build"/>
+         <definition value="Definition of attribute build"/>
+         <min value="1"/>
+         <max value="1"/>
+         <type>
+            <code value="Identifier"/>
+         </type>
+      </element>
+      <element id="GenomeAssembly.description">
+         <path value="GenomeAssembly.description"/>
+         <short value="Short definition of attribute description"/>
+         <definition value="Definition of attribute description"/>
+         <min value="1"/>
+         <max value="1"/>
+         <type>
+            <code value="string"/>
+         </type>
+      </element>
+      <element id="GenomeAssembly.organism">
+         <path value="GenomeAssembly.organism"/>
+         <short value="Short definition of attribute organism"/>
+         <definition value="Definition of attribute organism"/>
+         <min value="1"/>
+         <max value="1"/>
+         <type>
+            <code value="CodeableConcept"/>
+         </type>
+      </element>
+      <element id="GenomeAssembly.isPart">
+         <path value="GenomeAssembly.isPart"/>
+         <short value="Short definition of attribute isPart"/>
+         <definition value="Definition of attribute isPart"/>
+         <min value="0"/>
+         <max value="*"/>
+         <type>
+            <code value="Reference"/>
+            <targetProfile value="http://hl7.org/fhir/uv/genomics-logicalmodel/StructureDefinition/Sequence"/>
+         </type>
+      </element>
+   </differential>
+</StructureDefinition>

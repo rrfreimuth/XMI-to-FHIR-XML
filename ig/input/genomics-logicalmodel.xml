@@ -43,17 +43,59 @@
       inappropriate to use the defaults.  Feel free to provide feedback about the defaults... -->
     <resource>
       <reference>
-        <reference value="StructureDefinition/Interval"/>
-      </reference>
-      <name value="Interval (Abstract)"/>
-      <description value="Base Interval"/>
-    </resource>
-    <resource>
-      <reference>
         <reference value="StructureDefinition/CoordinateInterval"/>
       </reference>
       <name value="CoordinateInterval"/>
       <description value="Coordinate Interval"/>
+    </resource>
+    <resource>
+      <reference>
+        <reference value="StructureDefinition/GenomeAssembly"/>
+      </reference>
+      <name value="GenomeAssembly"/>
+      <description value="Genome Assembly"/>
+    </resource>
+    <resource>
+      <reference>
+        <reference value="StructureDefinition/Sequence"/>
+      </reference>
+      <name value="Sequence"/>
+      <description value="Sequence"/>
+    </resource>
+    <resource>
+      <reference>
+        <reference value="StructureDefinition/SimpleSequence"/>
+      </reference>
+      <name value="SimpleSequence"/>
+      <description value="Simple Sequence"/>
+    </resource>
+    <resource>
+      <reference>
+        <reference value="StructureDefinition/RelativeSequence"/>
+      </reference>
+      <name value="RelativeSequence"/>
+      <description value="Relative Sequence"/>
+    </resource>
+    <resource>
+      <reference>
+        <reference value="StructureDefinition/FormattedSequence"/>
+      </reference>
+      <name value="FormattedSequence"/>
+      <description value="Formatted Sequence"/>
+    </resource>
+    <resource>
+      <reference>
+        <reference value="StructureDefinition/SequenceRepresentation"/>
+      </reference>
+      <name value="SequenceRepresentation"/>
+      <description value="Sequence Representation"/>
+    </resource>
+    <resource>
+      <reference>
+        <reference value="StructureDefinition/SequenceEdit"/>
+      </reference>
+      <name value="SequenceEdit"/>
+      <description value="Sequence Edit"/>
     </resource>
     <page>
       <!-- The root will always be toc.html - the template will force it if you don't do it -->

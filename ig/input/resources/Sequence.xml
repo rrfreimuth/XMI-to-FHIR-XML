@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<StructureDefinition xmlns="http://hl7.org/fhir">
+   <id value="Sequence"/>
+   <text>
+      <status value="generated"/>
+      <div xmlns="http://www.w3.org/1999/xhtml">
+         <p>
+            <b>CG Sequence Logical Model</b>
+         </p>
+         <p>A class to model Sequence</p>
+      </div>
+   </text>
+   <url value="http://hl7.org/fhir/uv/genomics-logicalmodel/StructureDefinition/Sequence"/>
+   <version value="0.1.0"/>
+   <name value="Sequence"/>
+   <title value="CG Sequence Logical Model"/>
+   <status value="draft"/>
+   <date value="2020-04-01T19:00:00-05:00"/>
+   <publisher value="HL7 International - Clinical Genomics Work Group"/>
+   <contact>
+      <telecom>
+         <system value="url"/>
+         <value value="https://confluence.hl7.org/display/CGW/WorkGroup+Home"/>
+      </telecom>
+   </contact>
+   <description value="Model Sequence"/>
+   <jurisdiction>
+      <coding>
+         <system value="http://unstats.un.org/unsd/methods/m49/m49.htm"/>
+         <code value="001"/>
+      </coding>
+   </jurisdiction>
+   <fhirVersion value="4.0.1"/>
+   <kind value="logical"/>
+   <abstract value="false"/>
+   <type value="Sequence"/>
+   <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Element"/>
+   <derivation value="specialization"/>
+   <differential>
+      <element id="Sequence">
+         <path value="Sequence"/>
+         <definition value="Model Sequence"/>
+         <min value="0"/>
+         <max value="*"/>
+      </element>
+      <element id="Sequence.accession">
+         <path value="Sequence.accession"/>
+         <short value="Short definition of attribute accession"/>
+         <definition value="Definition of attribute accession"/>
+         <min value="0"/>
+         <max value="1"/>
+         <type>
+            <code value="CodeableConcept"/>
+         </type>
+      </element>
+      <element id="Sequence.identifier">
+         <path value="Sequence.identifier"/>
+         <short value="Short definition of attribute identifier"/>
+         <definition value="Definition of attribute identifier"/>
+         <min value="0"/>
+         <max value="*"/>
+         <type>
+            <code value="CodeableConcept"/>
+         </type>
+      </element>
+      <element id="Sequence.name">
+         <path value="Sequence.name"/>
+         <short value="Short definition of attribute name"/>
+         <definition value="Definition of attribute name"/>
+         <min value="0"/>
+         <max value="*"/>
+         <type>
+            <code value="string"/>
+         </type>
+      </element>
+      <element id="Sequence.type">
+         <path value="Sequence.type"/>
+         <short value="Short definition of attribute type"/>
+         <definition value="Definition of attribute type"/>
+         <min value="1"/>
+         <max value="1"/>
+         <type>
+            <code value="CodeableConcept"/>
+         </type>
+      </element>
+      <element id="Sequence.hasSequence">
+         <path value="Sequence.hasSequence"/>
+         <short value="Short definition of attribute hasSequence"/>
+         <definition value="Definition of attribute hasSequence"/>
+         <min value="1"/>
+         <max value="*"/>
+         <type>
+            <code value="Reference"/>
+            <targetProfile value="http://hl7.org/fhir/uv/genomics-logicalmodel/StructureDefinition/GenomeAssembly"/>
+         </type>
+      </element>
+      <element id="Sequence.value">
+         <path value="Sequence.value"/>
+         <short value="Short definition of attribute value"/>
+         <definition value="Definition of attribute value"/>
+         <min value="0"/>
+         <max value="*"/>
+         <type>
+            <code value="Reference"/>
+            <targetProfile value="http://hl7.org/fhir/uv/genomics-logicalmodel/StructureDefinition/GenomeAssembly"/>
+         </type>
+      </element>
+   </differential>
+</StructureDefinition>
