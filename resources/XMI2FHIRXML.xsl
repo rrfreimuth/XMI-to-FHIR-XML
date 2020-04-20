@@ -3,8 +3,10 @@
 <xsl:stylesheet exclude-result-prefixes="#all"
   xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
      xmlns:xs="http://www.w3.org/2001/XMLSchema"
-     xmlns:uml="http://schema.omg.org/spec/UML/2.1"
-     xmlns:xmi="http://schema.omg.org/spec/XMI/2.1"
+     xmlns:uml="http://www.omg.org/spec/UML/20131001"
+     xmlns:xmi="http://www.omg.org/spec/XMI/20131001"
+     xmlns:umldi="http://www.omg.org/spec/UML/20131001/UMLDI"
+     xmlns:dc="http://www.omg.org/spec/UML/20131001/UMLDC"
      xmlns:fhir="http://hl7.org/fhir"
      xmlns:thecustomprofile="http://www.sparxsystems.com/profiles/thecustomprofile/1.0"
   version="2.0">
@@ -16,7 +18,7 @@
   	</xsl:template>
 
     <xsl:template match="packagedElement">
-    <xsl:for-each select="packagedElement[@*[1] = 'uml:Class']"> <!-- qualifies on attribute xmi:type="uml:Class"  -->
+    <xsl:for-each select="packagedElement[@xmi:type = 'uml:Class']"> <!-- qualifies on attribute xmi:type="uml:Class"  -->
       <xsl:variable name="filename"
     		select="concat('output/',@name,'.xml')" />
       <xsl:variable name="classname" select="@name"/>
