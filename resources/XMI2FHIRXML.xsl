@@ -24,6 +24,17 @@
       <xsl:variable name="classname" select="@name"/>
   	  <xsl:value-of select="$filename" />  <!-- Creating  -->
       <xsl:result-document href="{$filename}" format="xml">
+      <xsl:variable name="classId">
+      	<xsl:value-of select="@*[2]"/>
+      </xsl:variable>
+      <xsl:variable name="parentId">
+      	<xsl:value-of select="//packagedElement[@xmi:type = 'uml:Realization' and @client=$classId]/@supplier"/>
+      </xsl:variable>
+      <xsl:variable name = "parentName">
+      <xsl:if test="$parentId != ''">
+      		<xsl:value-of select="//packagedElement[@xmi:id=$parentId]/@name"/>
+	  </xsl:if>
+      </xsl:variable>
 
       <!-- hard coding the StructureDefintion like this (instead of using xsl:element)
            keeps all the child elements from having an empty 'xmlns:' (namespace) tag-->
@@ -98,8 +109,15 @@
   			<xsl:attribute name="value">false</xsl:attribute>
       	</xsl:element>
       	<xsl:element name="type">
-  			<xsl:attribute name="value">
-  				<xsl:value-of select="@name"/>
+      	  	<xsl:attribute name="value">
+      		<xsl:choose>
+      			<xsl:when test="$parentName != ''">
+      				<xsl:value-of select="$parentName"/>
+      			</xsl:when>
+      			<xsl:otherwise>
+  					<xsl:value-of select="@name"/>
+      			</xsl:otherwise>
+      		</xsl:choose>
   			</xsl:attribute>
       	</xsl:element>
         <!-- For now, have all models have a base of Element -->
