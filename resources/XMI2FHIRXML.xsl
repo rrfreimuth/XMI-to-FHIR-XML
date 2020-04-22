@@ -27,13 +27,21 @@
       <xsl:variable name="classId">
       	<xsl:value-of select="@*[2]"/>
       </xsl:variable>
-      <xsl:variable name="parentId">
+      <xsl:variable name="interfaceId">
       	<xsl:value-of select="//packagedElement[@xmi:type = 'uml:Realization' and @client=$classId]/@supplier"/>
       </xsl:variable>
+      <xsl:variable name="superClassId">
+      	<xsl:value-of select="generalization/@general"/>
+      </xsl:variable>
       <xsl:variable name = "parentName">
-      <xsl:if test="$parentId != ''">
-      		<xsl:value-of select="//packagedElement[@xmi:id=$parentId]/@name"/>
-	  </xsl:if>
+      <xsl:choose>
+      	<xsl:when  test="$interfaceId != ''">
+      		<xsl:value-of select="//packagedElement[@xmi:id=$interfaceId]/@name"/>
+      	</xsl:when>
+      	<xsl:when  test="$superClassId != ''">
+      		<xsl:value-of select="//ownedAttribute/type[@*[1]=$superClassId]/../../@name"/>
+      	</xsl:when>
+      </xsl:choose>
       </xsl:variable>
 
       <!-- hard coding the StructureDefintion like this (instead of using xsl:element)
