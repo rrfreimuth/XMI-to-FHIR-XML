@@ -58,11 +58,11 @@
       		</xsl:element>
       		<div xmlns="http://www.w3.org/1999/xhtml">
     				<p><b>CG <xsl:value-of select="@name"/> Logical Model</b></p>
-    				<p>A class to model <xsl:value-of select="@name"/></p>
+    				<p><xsl:value-of select="//element[@xmi:idref=$classId]/properties/@documentation"/></p>
   			</div>
   		</xsl:element>
   		<xsl:element name="url">
-      	 	<xsl:attribute name="value">http://hl7.org/fhir/uv/genomics-logicalmodel/StructureDefinition/<xsl:value-of select="@name"/></xsl:attribute>
+      	 	<xsl:attribute name="value">http://hl7.org/fhir/uv/-logicalmodel/StructureDefinition/<xsl:value-of select="@name"/></xsl:attribute>
       	</xsl:element>
   		<xsl:element name="version">
       	 	<xsl:attribute name="value">0.1.0</xsl:attribute>
