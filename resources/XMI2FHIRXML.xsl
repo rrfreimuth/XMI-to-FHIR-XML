@@ -157,6 +157,9 @@
   		  		<xsl:value-of select="@*[3]"/>
   		  	</xsl:if>
   		  </xsl:variable>
+  		   <xsl:variable name="ownedAttGuid">
+  		  		<xsl:value-of select="@xmi:id"/>
+  		  </xsl:variable>
   		  <xsl:variable name="elementName">
   		  <xsl:choose>
   		  	<xsl:when test="@name">
@@ -179,7 +182,7 @@
     				<xsl:attribute name="value">Short definition of attribute <xsl:value-of select="$elementName"/></xsl:attribute>
         		</xsl:element>
         		<xsl:element name="definition">
-    				<xsl:attribute name="value">Definition of attribute <xsl:value-of select="$elementName"/></xsl:attribute>
+    				<xsl:attribute name="value"><xsl:value-of select="//attribute[@xmi:idref=$ownedAttGuid]/documentation/@value"/></xsl:attribute>
         		</xsl:element>
         		<xsl:choose>
         			<xsl:when test="@name">
