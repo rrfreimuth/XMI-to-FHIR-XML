@@ -7,10 +7,12 @@
          <p>
             <b>CG GenomeAssembly Logical Model</b>
          </p>
-         <p>A class to model GenomeAssembly</p>
+         <p>The process of assembling many short DNA sequences together such that they represent the original chromosomes from which the DNA originated. [Source: Bioportal; https://bioportal.bioontology.org/ontologies/EDAM?p=classes&amp;amp;conceptid=http%3A%2F%2Fedamontology.org%2Foperation_0525 ]
+
+The genome assembly is simply the genome sequence produced after chromosomes have been fragmented, those fragments have been sequenced, and the resulting sequences have been put back together. [Source: https://www.ensembl.org]</p>
       </div>
    </text>
-   <url value="http://hl7.org/fhir/uv/genomics-logicalmodel/StructureDefinition/GenomeAssembly"/>
+   <url value="http://hl7.org/fhir/uv/-logicalmodel/StructureDefinition/GenomeAssembly"/>
    <version value="0.1.0"/>
    <name value="GenomeAssembly"/>
    <title value="CG GenomeAssembly Logical Model"/>
@@ -46,7 +48,7 @@
       <element id="GenomeAssembly.accession">
          <path value="GenomeAssembly.accession"/>
          <short value="Short definition of attribute accession"/>
-         <definition value="Definition of attribute accession"/>
+         <definition value=""/>
          <min value="0"/>
          <max value="1"/>
          <type>
@@ -56,7 +58,7 @@
       <element id="GenomeAssembly.build">
          <path value="GenomeAssembly.build"/>
          <short value="Short definition of attribute build"/>
-         <definition value="Definition of attribute build"/>
+         <definition value="The Genome Build used for reference, following GRCh build versions e.g. 'GRCh 37' [Source: FHIR Guidance Document]&#xA;"/>
          <min value="1"/>
          <max value="1"/>
          <type>
@@ -66,7 +68,7 @@
       <element id="GenomeAssembly.description">
          <path value="GenomeAssembly.description"/>
          <short value="Short definition of attribute description"/>
-         <definition value="Definition of attribute description"/>
+         <definition value="GenomeAssembly description"/>
          <min value="1"/>
          <max value="1"/>
          <type>
@@ -76,7 +78,7 @@
       <element id="GenomeAssembly.organism">
          <path value="GenomeAssembly.organism"/>
          <short value="Short definition of attribute organism"/>
-         <definition value="Definition of attribute organism"/>
+         <definition value="Organism of GenomeAssembly"/>
          <min value="1"/>
          <max value="1"/>
          <type>
@@ -86,7 +88,7 @@
       <element id="GenomeAssembly.isPart">
          <path value="GenomeAssembly.isPart"/>
          <short value="Short definition of attribute isPart"/>
-         <definition value="Definition of attribute isPart"/>
+         <definition value=""/>
          <min value="0"/>
          <max value="*"/>
          <type>

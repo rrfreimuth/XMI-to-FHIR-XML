@@ -20,7 +20,7 @@
     <xsl:template match="packagedElement">
     <xsl:for-each select="packagedElement[@xmi:type = 'uml:Class']"> <!-- qualifies on attribute xmi:type="uml:Class"  -->
       <xsl:variable name="filename"
-    		select="concat('output/',@name,'.xml')" />
+    		select="concat('ig/input/resources/',@name,'.xml')" />
       <xsl:variable name="classname" select="@name"/>
   	  <xsl:value-of select="$filename" />  <!-- Creating  -->
       <xsl:result-document href="{$filename}" format="xml">
@@ -62,7 +62,15 @@
   			</div>
   		</xsl:element>
   		<xsl:element name="url">
-      	 	<xsl:attribute name="value">http://hl7.org/fhir/uv/-logicalmodel/StructureDefinition/<xsl:value-of select="@name"/></xsl:attribute>
+      	 	<xsl:attribute name="value">http://hl7.org/fhir/uv/-logicalmodel/StructureDefinition/<xsl:choose>
+      	 			<xsl:when test="$parentName = ''">
+      	 				<xsl:value-of select="@name"/>
+      	 			</xsl:when>
+      	 			<xsl:otherwise>
+      	 				<xsl:value-of select = "$parentName"/>
+      	 			</xsl:otherwise>
+      	 		</xsl:choose>
+      	 	</xsl:attribute>
       	</xsl:element>
   		<xsl:element name="version">
       	 	<xsl:attribute name="value">0.1.0</xsl:attribute>
@@ -139,7 +147,9 @@
       	  <xsl:element name="element">
   			<xsl:attribute name="id"><xsl:value-of select="@name"/></xsl:attribute>
   			<xsl:element name="path">
-  				<xsl:attribute name="value"><xsl:value-of select="@name"/></xsl:attribute>
+  				<xsl:attribute name="value">
+  				<xsl:if test="$parentName != ''"><xsl:value-of select = "$parentName"/>.</xsl:if>
+  				<xsl:value-of select="@name"/></xsl:attribute>
       		</xsl:element>
       		<xsl:element name="definition">
   				<xsl:attribute name="value">Model <xsl:value-of select="$classname"/></xsl:attribute>
@@ -176,7 +186,9 @@
     		  <xsl:element name="element">
     		  <xsl:attribute name="id"><xsl:value-of select="concat($classname,'.',$elementName)"/></xsl:attribute>
     			<xsl:element name="path">
-    				<xsl:attribute name="value"><xsl:value-of select="concat($classname,'.',$elementName)"/></xsl:attribute>
+  				<xsl:attribute name="value">
+  				<xsl:if test="$parentName != ''"><xsl:value-of select = "$parentName"/>.</xsl:if>
+    			<xsl:value-of select="concat($classname,'.',$elementName)"/></xsl:attribute>
         		</xsl:element>
         		<xsl:element name="short">
     				<xsl:attribute name="value">Short definition of attribute <xsl:value-of select="$elementName"/></xsl:attribute>

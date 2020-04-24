@@ -7,10 +7,10 @@
          <p>
             <b>CG SequenceRepresentation Logical Model</b>
          </p>
-         <p>A class to model SequenceRepresentation</p>
+         <p>This abstract class represents the many different ways a molecular sequence could be represented. It allows a single instance of Sequence to link to the many file formats (etc) that are available for that sequence.</p>
       </div>
    </text>
-   <url value="http://hl7.org/fhir/uv/genomics-logicalmodel/StructureDefinition/SequenceRepresentation"/>
+   <url value="http://hl7.org/fhir/uv/-logicalmodel/StructureDefinition/SequenceRepresentation"/>
    <version value="0.1.0"/>
    <name value="SequenceRepresentation"/>
    <title value="CG SequenceRepresentation Logical Model"/>
@@ -46,7 +46,7 @@
       <element id="SequenceRepresentation.description">
          <path value="SequenceRepresentation.description"/>
          <short value="Short definition of attribute description"/>
-         <definition value="Definition of attribute description"/>
+         <definition value=""/>
          <min value="0"/>
          <max value="1"/>
          <type>
@@ -56,7 +56,7 @@
       <element id="SequenceRepresentation.type">
          <path value="SequenceRepresentation.type"/>
          <short value="Short definition of attribute type"/>
-         <definition value="Definition of attribute type"/>
+         <definition value=""/>
          <min value="1"/>
          <max value="1"/>
          <type>

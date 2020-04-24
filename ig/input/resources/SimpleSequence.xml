@@ -7,10 +7,10 @@
          <p>
             <b>CG SimpleSequence Logical Model</b>
          </p>
-         <p>A class to model SimpleSequence</p>
+         <p>An unformatted sequence represented as a simple string.</p>
       </div>
    </text>
-   <url value="http://hl7.org/fhir/uv/genomics-logicalmodel/StructureDefinition/SimpleSequence"/>
+   <url value="http://hl7.org/fhir/uv/-logicalmodel/StructureDefinition/Sequence"/>
    <version value="0.1.0"/>
    <name value="SimpleSequence"/>
    <title value="CG SimpleSequence Logical Model"/>
@@ -33,20 +33,20 @@
    <fhirVersion value="4.0.1"/>
    <kind value="logical"/>
    <abstract value="false"/>
-   <type value="SimpleSequence"/>
+   <type value="Sequence"/>
    <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Element"/>
    <derivation value="specialization"/>
    <differential>
       <element id="SimpleSequence">
-         <path value="SimpleSequence"/>
+         <path value="Sequence.SimpleSequence"/>
          <definition value="Model SimpleSequence"/>
          <min value="0"/>
          <max value="*"/>
       </element>
       <element id="SimpleSequence.encoding">
-         <path value="SimpleSequence.encoding"/>
+         <path value="Sequence.SimpleSequence.encoding"/>
          <short value="Short definition of attribute encoding"/>
-         <definition value="Definition of attribute encoding"/>
+         <definition value="The coding system (alphabet) used by the sequence. While IUPAC symbols are frequently assumed, this attribute can denote whether an amino acid sequence is encoded as single letter or 3-letter abbreviations.&#xA;"/>
          <min value="0"/>
          <max value="1"/>
          <type>
@@ -54,9 +54,9 @@
          </type>
       </element>
       <element id="SimpleSequence.value">
-         <path value="SimpleSequence.value"/>
+         <path value="Sequence.SimpleSequence.value"/>
          <short value="Short definition of attribute value"/>
-         <definition value="Definition of attribute value"/>
+         <definition value="The sequence itself"/>
          <min value="1"/>
          <max value="1"/>
          <type>

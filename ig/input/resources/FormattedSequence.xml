@@ -7,10 +7,10 @@
          <p>
             <b>CG FormattedSequence Logical Model</b>
          </p>
-         <p>A class to model FormattedSequence</p>
+         <p>A formatted sequence.  The attached sequence can be processed using existing software tools designed for the given format.</p>
       </div>
    </text>
-   <url value="http://hl7.org/fhir/uv/genomics-logicalmodel/StructureDefinition/FormattedSequence"/>
+   <url value="http://hl7.org/fhir/uv/-logicalmodel/StructureDefinition/FormattedSequence"/>
    <version value="0.1.0"/>
    <name value="FormattedSequence"/>
    <title value="CG FormattedSequence Logical Model"/>
@@ -46,7 +46,7 @@
       <element id="FormattedSequence.file">
          <path value="FormattedSequence.file"/>
          <short value="Short definition of attribute file"/>
-         <definition value="Definition of attribute file"/>
+         <definition value=""/>
          <min value="1"/>
          <max value="1"/>
          <type>

@@ -7,10 +7,10 @@
          <p>
             <b>CG CoordinateInterval Logical Model</b>
          </p>
-         <p>A class to model CoordinateInterval</p>
+         <p>Two integers that define the start and end positions of a range of residues, possibly with length zero, and specified using coordinates. [Source: VMC]</p>
       </div>
    </text>
-   <url value="http://hl7.org/fhir/uv/genomics-logicalmodel/StructureDefinition/CoordinateInterval"/>
+   <url value="http://hl7.org/fhir/uv/-logicalmodel/StructureDefinition/Interval"/>
    <version value="0.1.0"/>
    <name value="CoordinateInterval"/>
    <title value="CG CoordinateInterval Logical Model"/>
@@ -33,20 +33,20 @@
    <fhirVersion value="4.0.1"/>
    <kind value="logical"/>
    <abstract value="false"/>
-   <type value="CoordinateInterval"/>
+   <type value="Interval"/>
    <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Element"/>
    <derivation value="specialization"/>
    <differential>
       <element id="CoordinateInterval">
-         <path value="CoordinateInterval"/>
+         <path value="Interval.CoordinateInterval"/>
          <definition value="Model CoordinateInterval"/>
          <min value="0"/>
          <max value="*"/>
       </element>
       <element id="CoordinateInterval.end">
-         <path value="CoordinateInterval.end"/>
+         <path value="Interval.CoordinateInterval.end"/>
          <short value="Short definition of attribute end"/>
-         <definition value="Definition of attribute end"/>
+         <definition value=""/>
          <min value="1"/>
          <max value="1"/>
          <type>
@@ -54,9 +54,9 @@
          </type>
       </element>
       <element id="CoordinateInterval.numberingSystem">
-         <path value="CoordinateInterval.numberingSystem"/>
+         <path value="Interval.CoordinateInterval.numberingSystem"/>
          <short value="Short definition of attribute numberingSystem"/>
-         <definition value="Definition of attribute numberingSystem"/>
+         <definition value="Base number of coordinate system (0 for 0-based numbering or coordinates, inclusive start, exclusive end, 1 for 1-based numbering, inclusive start, inclusive end) [Source: FHIR Guidance Document]&#xA;A coordinate system is a specification for spatial location that uses a set of numbers, or coordinates, to uniquely determine the position of a point (based on Bioportal). [Source: Bioportal]&#xA;"/>
          <min value="1"/>
          <max value="1"/>
          <type>
@@ -64,9 +64,9 @@
          </type>
       </element>
       <element id="CoordinateInterval.start">
-         <path value="CoordinateInterval.start"/>
+         <path value="Interval.CoordinateInterval.start"/>
          <short value="Short definition of attribute start"/>
-         <definition value="Definition of attribute start"/>
+         <definition value=""/>
          <min value="1"/>
          <max value="1"/>
          <type>
