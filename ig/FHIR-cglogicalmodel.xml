@@ -33,6 +33,12 @@
    <artifact name="SequenceEdit"
              key="StructureDefinition-SequenceEdit"
              id="StructureDefinition/SequenceEdit"/>
+   <artifact name="CG Class1 Logical Model"
+             key="StructureDefinition-Class1"
+             id="StructureDefinition/Class1"/>
+   <artifact name="CG Class2 Logical Model"
+             key="StructureDefinition-Class2"
+             id="StructureDefinition/Class2"/>
    <page name="(NA)" key="NA"/>
    <page name="(many)" key="many"/>
    <page name="Table of Contents" key="toc"/>

@@ -7,10 +7,10 @@
          <p>
             <b>CG FormattedSequence Logical Model</b>
          </p>
-         <p>A formatted sequence.  The attached sequence can be processed using existing software tools designed for the given format.</p>
+         <p/>
       </div>
    </text>
-   <url value="http://hl7.org/fhir/uv/-logicalmodel/StructureDefinition/FormattedSequence"/>
+   <url value="http://hl7.org/fhir/uv/genomics-logicalmodel/StructureDefinition/FormattedSequence"/>
    <version value="0.1.0"/>
    <name value="FormattedSequence"/>
    <title value="CG FormattedSequence Logical Model"/>

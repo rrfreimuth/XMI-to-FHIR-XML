@@ -7,11 +7,10 @@
          <p>
             <b>CG SequenceEdit Logical Model</b>
          </p>
-         <p>Represents a single edit action (insert, delete or replace) on the occurrences of referenceAllele, within the referenceInterval of a referenced sequence, with replacementAllele.
-</p>
+         <p/>
       </div>
    </text>
-   <url value="http://hl7.org/fhir/uv/-logicalmodel/StructureDefinition/SequenceEdit"/>
+   <url value="http://hl7.org/fhir/uv/genomics-logicalmodel/StructureDefinition/SequenceEdit"/>
    <version value="0.1.0"/>
    <name value="SequenceEdit"/>
    <title value="CG SequenceEdit Logical Model"/>
@@ -47,7 +46,7 @@
       <element id="SequenceEdit.interval">
          <path value="SequenceEdit.interval"/>
          <short value="Short definition of attribute interval"/>
-         <definition value="Interval on a referenceSequence in which referenceAllele occurs.&#xA;"/>
+         <definition value=""/>
          <min value="1"/>
          <max value="1"/>
          <type>
@@ -57,7 +56,7 @@
       <element id="SequenceEdit.replacedSequence">
          <path value="SequenceEdit.replacedSequence"/>
          <short value="Short definition of attribute replacedSequence"/>
-         <definition value="Sequence of referenceAllele to be replaced by replacementAllele."/>
+         <definition value=""/>
          <min value="0"/>
          <max value="1"/>
          <type>
@@ -67,7 +66,7 @@
       <element id="SequenceEdit.replacementSequence">
          <path value="SequenceEdit.replacementSequence"/>
          <short value="Short definition of attribute replacementSequence"/>
-         <definition value="sequence of replacementAllele - used to replace the referenceAllele.&#xA;"/>
+         <definition value=""/>
          <min value="1"/>
          <max value="1"/>
          <type>

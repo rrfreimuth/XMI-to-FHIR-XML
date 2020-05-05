@@ -7,12 +7,10 @@
          <p>
             <b>CG Sequence Logical Model</b>
          </p>
-         <p>One or more molecular sequences, possibly with associated annotation. [ Source: Bioportal; https://bioportal.bioontology.org/ontologies/EDAM?p=classes&amp;amp;conceptid=http%3A%2F%2Fedamontology.org%2Fdata_2044 ]
-
-A representation of a molecular sequence (although the sequence may not be biological in origin), including DNA, RNA, and protein. Sequences are represented using canonical directionality, such as 5’-to-3’ for nucleotide sequences and N-to-C for amino acid sequences. </p>
+         <p/>
       </div>
    </text>
-   <url value="http://hl7.org/fhir/uv/-logicalmodel/StructureDefinition/Sequence"/>
+   <url value="http://hl7.org/fhir/uv/genomics-logicalmodel/StructureDefinition/Sequence"/>
    <version value="0.1.0"/>
    <name value="Sequence"/>
    <title value="CG Sequence Logical Model"/>
@@ -48,7 +46,7 @@ A representation of a molecular sequence (although the sequence may not be biolo
       <element id="Sequence.accession">
          <path value="Sequence.accession"/>
          <short value="Short definition of attribute accession"/>
-         <definition value="Identifier(s) for the sequence."/>
+         <definition value=""/>
          <min value="0"/>
          <max value="1"/>
          <type>
@@ -58,7 +56,7 @@ A representation of a molecular sequence (although the sequence may not be biolo
       <element id="Sequence.identifier">
          <path value="Sequence.identifier"/>
          <short value="Short definition of attribute identifier"/>
-         <definition value="Identifier(s) for the sequence."/>
+         <definition value=""/>
          <min value="0"/>
          <max value="*"/>
          <type>
@@ -68,7 +66,7 @@ A representation of a molecular sequence (although the sequence may not be biolo
       <element id="Sequence.name">
          <path value="Sequence.name"/>
          <short value="Short definition of attribute name"/>
-         <definition value="Name(s) or title(s) of the sequence."/>
+         <definition value=""/>
          <min value="0"/>
          <max value="*"/>
          <type>
@@ -78,22 +76,11 @@ A representation of a molecular sequence (although the sequence may not be biolo
       <element id="Sequence.type">
          <path value="Sequence.type"/>
          <short value="Short definition of attribute type"/>
-         <definition value="The type of sequence (e.g., genomic, plasmid, oligonucleotide, mRNA, tRNA, rRNA, ncRNA, protein, peptide)&#xA;&#xA;A sequence provides information about any biopolymer sequences. Specialized subclasses are provided to denote specialized instances of sequences, such as &#34;Codon Sequence&#34;, &#34;Reference Sequence&#34;, &#34;Protein Sequence&#34;, etc. Can be used to encode for the &#34;sequencing-scope&#34; pragma in GVF files. See subclasses for applications in both GFF3 and GVF files. [ Source: Bioportal; https://bioportal.bioontology.org/ontologies/GFVO?p=classes&amp;amp;conceptid=https%3A%2F%2Fwww.codamono.com%2Fbiointerchange%2Fgfvo%23Sequence ]"/>
+         <definition value=""/>
          <min value="1"/>
          <max value="1"/>
          <type>
             <code value="CodeableConcept"/>
-         </type>
-      </element>
-      <element id="Sequence.value">
-         <path value="Sequence.value"/>
-         <short value="Short definition of attribute value"/>
-         <definition value=""/>
-         <min value="0"/>
-         <max value="*"/>
-         <type>
-            <code value="Reference"/>
-            <targetProfile value="http://hl7.org/fhir/uv/genomics-logicalmodel/StructureDefinition/GenomeAssembly"/>
          </type>
       </element>
       <element id="Sequence.hasSequence">
@@ -101,6 +88,17 @@ A representation of a molecular sequence (although the sequence may not be biolo
          <short value="Short definition of attribute hasSequence"/>
          <definition value=""/>
          <min value="1"/>
+         <max value="*"/>
+         <type>
+            <code value="Reference"/>
+            <targetProfile value="http://hl7.org/fhir/uv/genomics-logicalmodel/StructureDefinition/GenomeAssembly"/>
+         </type>
+      </element>
+      <element id="Sequence.value">
+         <path value="Sequence.value"/>
+         <short value="Short definition of attribute value"/>
+         <definition value=""/>
+         <min value="0"/>
          <max value="*"/>
          <type>
             <code value="Reference"/>

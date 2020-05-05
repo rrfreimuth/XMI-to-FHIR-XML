@@ -18,7 +18,7 @@
   	</xsl:template>
 
     <xsl:template match="packagedElement">
-    <xsl:for-each select="packagedElement[@xmi:type = 'uml:Class']"> <!-- qualifies on attribute xmi:type="uml:Class"  -->
+    <xsl:for-each select="packagedElement[@xmi:type = 'uml:Class']">
       <xsl:variable name="filename"
     		select="concat('ig/input/resources/',@name,'.xml')" />
       <xsl:variable name="classname" select="@name"/>
@@ -62,7 +62,7 @@
   			</div>
   		</xsl:element>
   		<xsl:element name="url">
-      	 	<xsl:attribute name="value">http://hl7.org/fhir/uv/-logicalmodel/StructureDefinition/<xsl:choose>
+      	 	<xsl:attribute name="value">http://hl7.org/fhir/uv/genomics-logicalmodel/StructureDefinition/<xsl:choose>
       	 			<xsl:when test="$parentName = ''">
       	 				<xsl:value-of select="@name"/>
       	 			</xsl:when>

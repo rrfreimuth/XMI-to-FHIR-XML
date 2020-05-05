@@ -1,19 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <StructureDefinition xmlns="http://hl7.org/fhir">
-   <id value="RelativeSequence"/>
+   <id value="Class1"/>
    <text>
       <status value="generated"/>
       <div xmlns="http://www.w3.org/1999/xhtml">
          <p>
-            <b>CG RelativeSequence Logical Model</b>
+            <b>CG Class1 Logical Model</b>
          </p>
          <p/>
       </div>
    </text>
-   <url value="http://hl7.org/fhir/uv/genomics-logicalmodel/StructureDefinition/RelativeSequence"/>
+   <url value="http://hl7.org/fhir/uv/genomics-logicalmodel/StructureDefinition/Class1"/>
    <version value="0.1.0"/>
-   <name value="RelativeSequence"/>
-   <title value="CG RelativeSequence Logical Model"/>
+   <name value="Class1"/>
+   <title value="CG Class1 Logical Model"/>
    <status value="draft"/>
    <date value="2020-04-01T19:00:00-05:00"/>
    <publisher value="HL7 International - Clinical Genomics Work Group"/>
@@ -23,7 +23,7 @@
          <value value="https://confluence.hl7.org/display/CGW/WorkGroup+Home"/>
       </telecom>
    </contact>
-   <description value="Model RelativeSequence"/>
+   <description value="Model Class1"/>
    <jurisdiction>
       <coding>
          <system value="http://unstats.un.org/unsd/methods/m49/m49.htm"/>
@@ -33,25 +33,15 @@
    <fhirVersion value="4.0.1"/>
    <kind value="logical"/>
    <abstract value="false"/>
-   <type value="RelativeSequence"/>
+   <type value="Class1"/>
    <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Element"/>
    <derivation value="specialization"/>
    <differential>
-      <element id="RelativeSequence">
-         <path value="RelativeSequence"/>
-         <definition value="Model RelativeSequence"/>
+      <element id="Class1">
+         <path value="Class1"/>
+         <definition value="Model Class1"/>
          <min value="0"/>
          <max value="*"/>
-      </element>
-      <element id="RelativeSequence.startingSequence">
-         <path value="RelativeSequence.startingSequence"/>
-         <short value="Short definition of attribute startingSequence"/>
-         <definition value=""/>
-         <min value="1"/>
-         <max value="1"/>
-         <type>
-            <code value="Sequence"/>
-         </type>
       </element>
    </differential>
 </StructureDefinition>

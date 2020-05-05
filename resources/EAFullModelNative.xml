@@ -3,8 +3,6 @@
 	<xmi:Documentation exporter="Enterprise Architect" exporterVersion="6.5"/>
 	<uml:Model xmi:type="uml:Model" name="EA_Model">
 		<packagedElement xmi:type="uml:Package" xmi:id="EAPK_1D4F1B1E_E517_4d50_B844_CB3C9919D4F9" name="LM_SandBox">
-			<packagedElement xmi:type="uml:Class" xmi:id="EAID_F2E2BF31_888F_44ea_9554_75ED1CDB92C0" name="Class1"/>
-			<packagedElement xmi:type="uml:Class" xmi:id="EAID_CF1EB7F1_D96F_4b8b_AB46_1126D4EF70A5" name="Class2"/>
 			<packagedElement xmi:type="uml:Class" xmi:id="EAID_14AEF481_316E_4ace_A2EB_3C90B3FC7033" name="CoordinateInterval">
 				<ownedAttribute xmi:type="uml:Property" xmi:id="EAID_569CCCDF_E8AF_40e0_A241_D1EDC9A41307" name="end">
 					<lowerValue xmi:type="uml:LiteralInteger" xmi:id="EAID_LI000001_E8AF_40e0_A241_D1EDC9A41307" value="1"/>
@@ -276,26 +274,6 @@
 				<paths/>
 				<times created="2020-03-17 13:42:58" modified="2020-03-17 13:42:58" lastloaddate="2017-10-19 14:31:57" lastsavedate="2017-10-19 14:31:57"/>
 				<flags iscontrolled="FALSE" isprotected="FALSE" batchsave="0" batchload="0" usedtd="FALSE" logxml="FALSE"/>
-			</element>
-			<element xmi:idref="EAID_F2E2BF31_888F_44ea_9554_75ED1CDB92C0" xmi:type="uml:Class" name="Class1" scope="public">
-				<model package="EAPK_1D4F1B1E_E517_4d50_B844_CB3C9919D4F9" tpos="0" ea_localid="452" ea_eleType="element"/>
-				<properties isSpecification="false" sType="Class" nType="0" scope="public" isRoot="false" isLeaf="false" isAbstract="false" isActive="false"/>
-				<project author="M029206" version="1.0" phase="1.0" created="2020-03-25 09:10:43" modified="2020-03-25 09:10:43" complexity="1" status="Proposed"/>
-				<code gentype="Java"/>
-				<style appearance="BackColor=-1;BorderColor=-1;BorderWidth=-1;FontColor=-1;VSwimLanes=1;HSwimLanes=1;BorderStyle=0;"/>
-				<tags/>
-				<xrefs/>
-				<extendedProperties tagged="0" package_name="LM_SandBox"/>
-			</element>
-			<element xmi:idref="EAID_CF1EB7F1_D96F_4b8b_AB46_1126D4EF70A5" xmi:type="uml:Class" name="Class2" scope="public">
-				<model package="EAPK_1D4F1B1E_E517_4d50_B844_CB3C9919D4F9" tpos="0" ea_localid="453" ea_eleType="element"/>
-				<properties isSpecification="false" sType="Class" nType="0" scope="public" isRoot="false" isLeaf="false" isAbstract="false" isActive="false"/>
-				<project author="M029206" version="1.0" phase="1.0" created="2020-03-25 10:21:43" modified="2020-03-25 10:21:43" complexity="1" status="Proposed"/>
-				<code gentype="Java"/>
-				<style appearance="BackColor=-1;BorderColor=-1;BorderWidth=-1;FontColor=-1;VSwimLanes=1;HSwimLanes=1;BorderStyle=0;"/>
-				<tags/>
-				<xrefs/>
-				<extendedProperties tagged="0" package_name="LM_SandBox"/>
 			</element>
 			<element xmi:idref="EAID_14AEF481_316E_4ace_A2EB_3C90B3FC7033" xmi:type="uml:Class" name="CoordinateInterval" scope="public">
 				<model package="EAPK_1D4F1B1E_E517_4d50_B844_CB3C9919D4F9" tpos="0" ea_localid="451" ea_eleType="element"/>
