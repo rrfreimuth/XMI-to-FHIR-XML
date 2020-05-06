@@ -7,7 +7,7 @@
          <p>
             <b>CG SequenceRepresentation Logical Model</b>
          </p>
-         <p/>
+         <p>This abstract class represents the many different ways a molecular sequence could be represented. It allows a single instance of Sequence to link to the many file formats (etc) that are available for that sequence.</p>
       </div>
    </text>
    <url value="http://hl7.org/fhir/uv/genomics-logicalmodel/StructureDefinition/SequenceRepresentation"/>

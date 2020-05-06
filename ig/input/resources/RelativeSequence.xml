@@ -7,10 +7,10 @@
          <p>
             <b>CG RelativeSequence Logical Model</b>
          </p>
-         <p/>
+         <p>A biological sequence entity characterized relative to some other biological sequence entity (typically a reference). [Source: MSO:0002072]</p>
       </div>
    </text>
-   <url value="http://hl7.org/fhir/uv/genomics-logicalmodel/StructureDefinition/RelativeSequence"/>
+   <url value="http://hl7.org/fhir/uv/genomics-logicalmodel/StructureDefinition/Sequence"/>
    <version value="0.1.0"/>
    <name value="RelativeSequence"/>
    <title value="CG RelativeSequence Logical Model"/>
@@ -33,20 +33,20 @@
    <fhirVersion value="4.0.1"/>
    <kind value="logical"/>
    <abstract value="false"/>
-   <type value="RelativeSequence"/>
+   <type value="Sequence"/>
    <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Element"/>
    <derivation value="specialization"/>
    <differential>
       <element id="RelativeSequence">
-         <path value="RelativeSequence"/>
+         <path value="Sequence.RelativeSequence"/>
          <definition value="Model RelativeSequence"/>
          <min value="0"/>
          <max value="*"/>
       </element>
       <element id="RelativeSequence.startingSequence">
-         <path value="RelativeSequence.startingSequence"/>
+         <path value="Sequence.RelativeSequence.startingSequence"/>
          <short value="Short definition of attribute startingSequence"/>
-         <definition value=""/>
+         <definition value="Referenced or source sequence"/>
          <min value="1"/>
          <max value="1"/>
          <type>

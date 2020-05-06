@@ -7,7 +7,7 @@
          <p>
             <b>CG CoordinateInterval Logical Model</b>
          </p>
-         <p/>
+         <p>Two integers that define the start and end positions of a range of residues, possibly with length zero, and specified using coordinates. [Source: VMC]</p>
       </div>
    </text>
    <url value="http://hl7.org/fhir/uv/genomics-logicalmodel/StructureDefinition/Interval"/>
@@ -56,7 +56,7 @@
       <element id="CoordinateInterval.numberingSystem">
          <path value="Interval.CoordinateInterval.numberingSystem"/>
          <short value="Short definition of attribute numberingSystem"/>
-         <definition value=""/>
+         <definition value="Base number of coordinate system (0 for 0-based numbering or coordinates, inclusive start, exclusive end, 1 for 1-based numbering, inclusive start, inclusive end) [Source: FHIR Guidance Document]&#xA;A coordinate system is a specification for spatial location that uses a set of numbers, or coordinates, to uniquely determine the position of a point (based on Bioportal). [Source: Bioportal]&#xA;"/>
          <min value="1"/>
          <max value="1"/>
          <type>
