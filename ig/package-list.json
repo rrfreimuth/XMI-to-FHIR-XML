@@ -1,5 +1,5 @@
 {
- "package-id" : "hl7.fhir.uv.cglogicalmodel",
+ "package-id" : "hl7.fhir.uv.genomics-logicalmodel",
  "title" : "Clinical Genomics - Logical Model",
  "canonical" : "http://hl7.org/fhir/uv/genomics-logicalmodel",
  "introduction" : "Clinical Genomics - Logical Model",

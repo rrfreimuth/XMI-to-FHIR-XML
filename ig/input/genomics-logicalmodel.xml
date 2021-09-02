@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- Start by finding all references to "myig" and updating to appropriate text for your IG, including changing realm -->
 <ImplementationGuide xmlns="http://hl7.org/fhir" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://hl7.org/fhir ../input-cache/schemas/R5/fhir-single.xsd">
-  <id value="hl7.fhir.uv.cglogicalmodel"/>
+  <id value="hl7.fhir.uv.genomics-logicalmodel"/>
 <!--  <extension url="http://hl7.org/fhir/tools/StructureDefinition/igpublisher-spreadsheet">
     <valueString value="resources-spreadsheet.xml"/>
   </extension>-->
   <url value="http://hl7.org/fhir/uv/genomics-logicalmodel/ImplementationGuide/genomics-logicalmodel"/>
   <!-- This version will propagate to all artifacts unless the "propagate-version" extension is overridden -->
   <version value="0.1.0"/>
-  <name value="CGLogicalModel"/>
+  <name value="GenomicsLogicalModel"/>
   <title value="Clinical Genomics - Logical Model"/>
   <status value="draft"/>
   <experimental value="false"/>
@@ -27,13 +27,9 @@
       <!-- This is the code for universal -->
       <system value="http://unstats.un.org/unsd/methods/m49/m49.htm"/>
       <code value="001"/>
-      <!-- Change to this if the IG is country-specific
-      <system value="http://unstats.un.org/unsd/methods/m49/m49.htm"/>
-      <code value="001"/>
-      -->
     </coding>
   </jurisdiction>
-  <packageId value="hl7.fhir.uv.cglogicalmodel"/>
+  <packageId value="hl7.fhir.uv.genomics-logicalmodel"/>
   <!-- This should be changed to 'not-open-source' or another license if appropriate for non-HL7-published content -->
   <license value="CC0-1.0"/>
   <!-- This is whatever FHIR version(s) the IG artifacts are targeting (not the version of this file, which should always be 'current release') -->
@@ -43,59 +39,17 @@
       inappropriate to use the defaults.  Feel free to provide feedback about the defaults... -->
     <resource>
       <reference>
-        <reference value="StructureDefinition/CoordinateInterval"/>
+        <reference value="StructureDefinition/MolecularSequence"/>
       </reference>
-      <name value="CoordinateInterval"/>
-      <description value="Coordinate Interval"/>
+      <name value="MolecularSequence"/>
+      <description value="MolecularSequence - Description"/>
     </resource>
     <resource>
       <reference>
-        <reference value="StructureDefinition/GenomeAssembly"/>
+        <reference value="StructureDefinition/MolecularPreciseInterval"/>
       </reference>
-      <name value="GenomeAssembly"/>
-      <description value="Genome Assembly"/>
-    </resource>
-    <resource>
-      <reference>
-        <reference value="StructureDefinition/Sequence"/>
-      </reference>
-      <name value="Sequence"/>
-      <description value="Sequence"/>
-    </resource>
-    <resource>
-      <reference>
-        <reference value="StructureDefinition/SimpleSequence"/>
-      </reference>
-      <name value="SimpleSequence"/>
-      <description value="Simple Sequence"/>
-    </resource>
-    <resource>
-      <reference>
-        <reference value="StructureDefinition/RelativeSequence"/>
-      </reference>
-      <name value="RelativeSequence"/>
-      <description value="Relative Sequence"/>
-    </resource>
-    <resource>
-      <reference>
-        <reference value="StructureDefinition/FormattedSequence"/>
-      </reference>
-      <name value="FormattedSequence"/>
-      <description value="Formatted Sequence"/>
-    </resource>
-    <resource>
-      <reference>
-        <reference value="StructureDefinition/SequenceRepresentation"/>
-      </reference>
-      <name value="SequenceRepresentation"/>
-      <description value="Sequence Representation"/>
-    </resource>
-    <resource>
-      <reference>
-        <reference value="StructureDefinition/SequenceEdit"/>
-      </reference>
-      <name value="SequenceEdit"/>
-      <description value="Sequence Edit"/>
+      <name value="MolecularPreciseInterval"/>
+      <description value="MolecularPreciseInterval - Description"/>
     </resource>
     <page>
       <!-- The root will always be toc.html - the template will force it if you don't do it -->

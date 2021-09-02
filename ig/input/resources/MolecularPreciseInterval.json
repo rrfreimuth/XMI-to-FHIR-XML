@@ -1,0 +1,95 @@
+{
+    "resourceType": "StructureDefinition",
+    "id": "MolecularPreciseInterval",
+    "url": "http://hl7.org/fhir/uv/genomics-logicalmodel/StructureDefinition/MolecularPreciseInterval",
+    "name": "MolecularPreciseInterval",
+    "title": "Precise Interval",
+    "purpose": "MolecularPreciseInterval",
+    "status": "draft",
+    "date": "2021-09-02T12:15:55-05:00",
+    "identifier": [
+        {
+            "system": "http://clinfhir.com",
+            "value": "author"
+        }
+    ],
+    "kind": "logical",
+    "abstract": false,
+    "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Element",
+    "type": "MolecularPreciseInterval",
+    "derivation": "specialization",
+    "differential": {
+        "element": [
+            {
+                "id": "MolecularPreciseInterval",
+                "path": "MolecularPreciseInterval",
+                "definition": "No description",
+                "min": 1,
+                "max": "1",
+                "base": {
+                    "path": "MolecularPreciseInterval",
+                    "min": 0,
+                    "max": "1"
+                }
+            },
+            {
+                "id": "MolecularPreciseInterval.numberingSystem",
+                "path": "MolecularPreciseInterval.numberingSystem",
+                "short": "The numbering system used for coordinates",
+                "definition": "The numbering system used for counting residues for coordinates.  Common systems include 0-based inter-residue, 0-based residue, and 1-based residue.",
+                "min": 1,
+                "max": "1",
+                "mustSupport": true,
+                "type": [
+                    {
+                        "code": "code"
+                    }
+                ],
+                "base": {
+                    "path": "MolecularPreciseInterval.numberingSystem",
+                    "min": 0,
+                    "max": "1"
+                }
+            },
+            {
+                "id": "MolecularPreciseInterval.start",
+                "path": "MolecularPreciseInterval.start",
+                "short": "Starting position of a defined interval",
+                "definition": "Starting position of a defined interval",
+                "min": 1,
+                "max": "1",
+                "mustSupport": true,
+                "type": [
+                    {
+                        "code": "integer"
+                    }
+                ],
+                "base": {
+                    "path": "MolecularPreciseInterval.start",
+                    "min": 0,
+                    "max": "1"
+                }
+            },
+            {
+                "label": "end",
+                "id": "MolecularPreciseInterval.end",
+                "path": "MolecularPreciseInterval.end",
+                "short": "End position of a defined interval",
+                "definition": "End position of a defined interval",
+                "min": 1,
+                "max": "1",
+                "mustSupport": true,
+                "type": [
+                    {
+                        "code": "integer"
+                    }
+                ],
+                "base": {
+                    "path": "MolecularPreciseInterval.end",
+                    "min": 0,
+                    "max": "1"
+                }
+            }
+        ]
+    }
+}

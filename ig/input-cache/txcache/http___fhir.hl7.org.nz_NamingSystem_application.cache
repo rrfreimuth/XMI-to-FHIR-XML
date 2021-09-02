@@ -1,0 +1,13 @@
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://fhir.hl7.org.nz/NamingSystem/application",
+  "code" : "clinfhir"
+}, "valueSet" :null, "lang":"en-US", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS"}####
+v: {
+  "display" : "",
+  "code" : "",
+  "system" : "",
+  "severity" : "error",
+  "error" : "Error performing operation 'validate-code: Cannot invoke \"java.util.List.iterator()\" because \"headers\" is null' (parameters = \"\")"
+}
+-------------------------------------------------------------------------------------

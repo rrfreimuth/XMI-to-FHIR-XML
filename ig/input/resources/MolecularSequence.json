@@ -1,0 +1,589 @@
+{
+    "resourceType": "StructureDefinition",
+    "id": "MolecularSequence",
+    "url": "http://hl7.org/fhir/uv/genomics-logicalmodel/StructureDefinition/MolecularSequence",
+    "name": "MolecularSequence",
+    "title": "Molecular Sequence",
+    "purpose": "Next version of MolecularSequence resource",
+    "status": "draft",
+    "date": "2021-09-02T08:51:45-05:00",
+    "identifier": [
+        {
+            "system": "http://clinfhir.com",
+            "value": "author"
+        }
+    ],
+    "kind": "logical",
+    "abstract": false,
+    "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Element",
+    "type": "MolecularSequence",
+    "derivation": "specialization",
+    "differential": {
+        "element": [
+            {
+                "id": "MolecularSequence",
+                "path": "MolecularSequence",
+                "definition": "No description",
+                "min": 1,
+                "max": "1",
+                "base": {
+                    "path": "MolecularSequence",
+                    "min": 0,
+                    "max": "1"
+                }
+            },
+            {
+                "label": "name",
+                "id": "MolecularSequence.name",
+                "path": "MolecularSequence.name",
+                "short": "Name of sequence",
+                "definition": "The human-readable name of the sequence.",
+                "min": 0,
+                "max": "1",
+                "mustSupport": false,
+                "type": [
+                    {
+                        "code": "string"
+                    }
+                ],
+                "base": {
+                    "path": "MolecularSequence.name",
+                    "min": 0,
+                    "max": "1"
+                }
+            },
+            {
+                "label": "type",
+                "id": "MolecularSequence.type",
+                "path": "MolecularSequence.type",
+                "short": "The type of sequence (genomic, mRNA, protein, ...)",
+                "definition": "The type of the sequence.  Ideally, a code from an ontology would be used to designate genomic (including plasmid and short oligonucleotides), RNA (including mRNA, tRNA, ncRNA, etc), and protein (including short peptides).  The bindings for this element have not yet been determined.",
+                "min": 1,
+                "max": "1",
+                "mustSupport": true,
+                "type": [
+                    {
+                        "code": "CodeableConcept"
+                    }
+                ],
+                "base": {
+                    "path": "MolecularSequence.type",
+                    "min": 0,
+                    "max": "1"
+                }
+            },
+            {
+                "label": "identifier",
+                "id": "MolecularSequence.identifier",
+                "path": "MolecularSequence.identifier",
+                "short": "Identifier(s) for the sequence",
+                "definition": "TO UPDATE: use SequenceDesignation datatype\n\nIdentifier(s) for the sequence, which should be expressed using the coding.code element.  The coding system should be specified to avoid ambiguity.",
+                "min": 0,
+                "max": "*",
+                "mustSupport": true,
+                "type": [
+                    {
+                        "code": "CodeableConcept"
+                    }
+                ],
+                "base": {
+                    "path": "MolecularSequence.identifier",
+                    "min": 0,
+                    "max": "1"
+                }
+            },
+            {
+                "label": "genomeAssembly",
+                "id": "MolecularSequence.genomeAssembly",
+                "path": "MolecularSequence.genomeAssembly",
+                "short": "A genome assembly",
+                "definition": "A genome assembly",
+                "min": 0,
+                "max": "*",
+                "mustSupport": true,
+                "type": [
+                    {
+                        "code": "BackboneElement"
+                    }
+                ],
+                "base": {
+                    "path": "MolecularSequence.genomeAssembly",
+                    "min": 0,
+                    "max": "1"
+                }
+            },
+            {
+                "label": "build",
+                "id": "MolecularSequence.genomeAssembly.build",
+                "path": "MolecularSequence.genomeAssembly.build",
+                "short": "Genome build",
+                "definition": "The identifier of a genome build.",
+                "min": 1,
+                "max": "1",
+                "mustSupport": true,
+                "type": [
+                    {
+                        "code": "Identifier"
+                    }
+                ],
+                "base": {
+                    "path": "MolecularSequence.genomeAssembly.build",
+                    "min": 0,
+                    "max": "1"
+                }
+            },
+            {
+                "label": "organism",
+                "id": "MolecularSequence.genomeAssembly.organism",
+                "path": "MolecularSequence.genomeAssembly.organism",
+                "short": "Organism",
+                "definition": "The organism corresponding to the Genome Assembly.  Preferably expressed using an NCBI taxonomy code.",
+                "min": 1,
+                "max": "1",
+                "mustSupport": true,
+                "type": [
+                    {
+                        "code": "CodeableConcept"
+                    }
+                ],
+                "base": {
+                    "path": "MolecularSequence.genomeAssembly.organism",
+                    "min": 0,
+                    "max": "1"
+                }
+            },
+            {
+                "label": "description",
+                "id": "MolecularSequence.genomeAssembly.description",
+                "path": "MolecularSequence.genomeAssembly.description",
+                "short": "Description of the Genome Assembly",
+                "definition": "A description of the Genome Assembly.",
+                "min": 1,
+                "max": "1",
+                "mustSupport": false,
+                "type": [
+                    {
+                        "code": "string"
+                    }
+                ],
+                "base": {
+                    "path": "MolecularSequence.genomeAssembly.description",
+                    "min": 0,
+                    "max": "1"
+                }
+            },
+            {
+                "label": "accession",
+                "id": "MolecularSequence.genomeAssembly.accession",
+                "path": "MolecularSequence.genomeAssembly.accession",
+                "short": "Genome build accession number",
+                "definition": "The accession number of the Genome Build",
+                "min": 0,
+                "max": "1",
+                "mustSupport": true,
+                "type": [
+                    {
+                        "code": "CodeableConcept"
+                    }
+                ],
+                "base": {
+                    "path": "MolecularSequence.genomeAssembly.accession",
+                    "min": 0,
+                    "max": "1"
+                }
+            },
+            {
+                "label": "representation",
+                "id": "MolecularSequence.representations",
+                "path": "MolecularSequence.representation",
+                "short": "Represents the many different ways a molecular sequence could be represented",
+                "definition": "This element allows a single instance of Sequence to be represented in many different ways, including different file formats.",
+                "min": 0,
+                "max": "*",
+                "mustSupport": true,
+                "type": [
+                    {
+                        "code": "BackboneElement"
+                    }
+                ],
+                "base": {
+                    "path": "MolecularSequence.representation",
+                    "min": 0,
+                    "max": "1"
+                }
+            },
+            {
+                "label": "literal",
+                "id": "MolecularSequence.representations.simple",
+                "path": "MolecularSequence.representation.literal",
+                "short": "Literal sequence",
+                "definition": "A sequence represented as a literal string",
+                "min": 0,
+                "max": "1",
+                "mustSupport": true,
+                "type": [
+                    {
+                        "code": "BackboneElement"
+                    }
+                ],
+                "base": {
+                    "path": "MolecularSequence.representation.literal",
+                    "min": 0,
+                    "max": "1"
+                }
+            },
+            {
+                "label": "encoding",
+                "id": "MolecularSequence.representations.simple.encoding",
+                "path": "MolecularSequence.representation.literal.encoding",
+                "short": "The coding system (alphabet) used by the sequence",
+                "definition": "The coding system (alphabet) used by the sequence.  While IUPAC symbols are frequently assumed, this attribute can denote whether an amino acid sequence is encoded as single letter or 3-letter abbreviations.  Ideally, a value set defining common coding systems would be developed.",
+                "min": 0,
+                "max": "1",
+                "mustSupport": true,
+                "type": [
+                    {
+                        "code": "CodeableConcept"
+                    }
+                ],
+                "base": {
+                    "path": "MolecularSequence.representation.literal.encoding",
+                    "min": 0,
+                    "max": "1"
+                }
+            },
+            {
+                "label": "value",
+                "id": "MolecularSequence.representations.simple.value",
+                "path": "MolecularSequence.representation.literal.value",
+                "short": "The literal sequence expressed as a string",
+                "definition": "The literal sequence expressed as a string",
+                "min": 1,
+                "max": "1",
+                "mustSupport": true,
+                "type": [
+                    {
+                        "code": "string"
+                    }
+                ],
+                "base": {
+                    "path": "MolecularSequence.representation.literal.value",
+                    "min": 0,
+                    "max": "1"
+                }
+            },
+            {
+                "label": "formatted",
+                "id": "MolecularSequence.representations.formatted",
+                "path": "MolecularSequence.representation.formatted",
+                "short": "A formatted sequence",
+                "definition": "A sequence expressed in a pre-defined format.  The attached sequence can be processed using existing software tools designed for the given format.",
+                "min": 0,
+                "max": "1",
+                "mustSupport": true,
+                "type": [
+                    {
+                        "code": "BackboneElement"
+                    }
+                ],
+                "base": {
+                    "path": "MolecularSequence.representation.formatted",
+                    "min": 0,
+                    "max": "1"
+                }
+            },
+            {
+                "label": "file",
+                "id": "MolecularSequence.representation.formatted.file",
+                "path": "MolecularSequence.representation.formatted.file",
+                "short": "Attached file",
+                "definition": "A file containing the formatted sequence.",
+                "min": 1,
+                "max": "1",
+                "mustSupport": true,
+                "type": [
+                    {
+                        "code": "Attachment"
+                    }
+                ],
+                "base": {
+                    "path": "MolecularSequence.representation.formatted.file",
+                    "min": 0,
+                    "max": "1"
+                }
+            },
+            {
+                "label": "resolveable",
+                "id": "MolecularSequence.representations.resolveable",
+                "path": "MolecularSequence.representation.resolveable",
+                "short": "A sequenced retrieved from a URI",
+                "definition": "Reference to a sequence that is not explicitly provided within this instance of Sequence, but which can be retrieved by resolving the URI",
+                "min": 0,
+                "max": "1",
+                "mustSupport": true,
+                "type": [
+                    {
+                        "code": "BackboneElement"
+                    }
+                ],
+                "base": {
+                    "path": "MolecularSequence.representation.resolveable",
+                    "min": 0,
+                    "max": "1"
+                }
+            },
+            {
+                "label": "uri",
+                "id": "MolecularSequence.representations.resolveable.uri",
+                "path": "MolecularSequence.representation.resolveable.uri",
+                "short": "A URI that, when resolved, will return the sequence",
+                "definition": "A resolvable, absolute address that, when accessed, will return the Sequence",
+                "min": 1,
+                "max": "1",
+                "mustSupport": true,
+                "type": [
+                    {
+                        "code": "uri"
+                    }
+                ],
+                "base": {
+                    "path": "MolecularSequence.representation.resolveable.uri",
+                    "min": 0,
+                    "max": "1"
+                }
+            },
+            {
+                "label": "format",
+                "id": "MolecularSequence.representations.resolveable.format",
+                "path": "MolecularSequence.representation.resolveable.format",
+                "short": "The format of the resolved sequence",
+                "definition": "The format of the resolved sequence.  The codes for this element should be the same as those for a Formatted Sequence.",
+                "min": 0,
+                "max": "1",
+                "mustSupport": true,
+                "type": [
+                    {
+                        "code": "code"
+                    }
+                ],
+                "base": {
+                    "path": "MolecularSequence.representation.resolveable.format",
+                    "min": 0,
+                    "max": "1"
+                }
+            },
+            {
+                "label": "relative",
+                "id": "MolecularSequence.representations.relative",
+                "path": "MolecularSequence.representation.relative",
+                "short": "A Sequence defined relative to another Sequence(s)",
+                "definition": "The definition of a new sequence that is represented by applying an ordered series of edits to one or more other Sequences.",
+                "min": 0,
+                "max": "1",
+                "mustSupport": true,
+                "type": [
+                    {
+                        "code": "BackboneElement"
+                    }
+                ],
+                "base": {
+                    "path": "MolecularSequence.representation.relative",
+                    "min": 0,
+                    "max": "1"
+                }
+            },
+            {
+                "id": "MolecularSequence.representations.relative.startingSequence[x]",
+                "path": "MolecularSequence.representation.relative.startingSequence[x]",
+                "short": "The starting Sequence",
+                "definition": "A reference to the Sequence used as the starting \"base\" of the Sequence that is to be derived.",
+                "min": 1,
+                "max": "1",
+                "mustSupport": true,
+                "type": [
+                    {
+                        "code": "Reference",
+                        "targetProfile": ["http://hl7.org/fhir/uv/genomics-logicalmodel/StructureDefinition/MolecularSequence"]
+                    },
+                    {
+                        "code": "string"
+                    }
+                ],
+                "base": {
+                    "path": "MolecularSequence.representation.relative.startingSequence[x]",
+                    "min": 0,
+                    "max": "1"
+                }
+            },
+            {
+                "label": "edits",
+                "id": "MolecularSequence.representations.relative.edits",
+                "path": "MolecularSequence.representation.relative.edits",
+                "short": "The edits to apply to the starting sequence",
+                "definition": "An ordered series of edits to apply to the starting sequence",
+                "min": 1,
+                "max": "*",
+                "mustSupport": true,
+                "type": [
+                    {
+                        "code": "BackboneElement"
+                    }
+                ],
+                "base": {
+                    "path": "MolecularSequence.representation.relative.edits",
+                    "min": 0,
+                    "max": "1"
+                }
+            },
+            {
+                "label": "interval",
+                "id": "MolecularSequence.representations.relative.edits.interval",
+                "path": "MolecularSequence.representation.relative.edits.interval",
+                "short": "The interval on the current Sequence that defines the region to be replaced",
+                "definition": "The coordinate interval that defines the region of Sequence to be replaced during the current edit operation",
+                "min": 1,
+                "max": "1",
+                "mustSupport": true,
+                "type": [
+                    {
+                        "code": "http://hl7.org/fhir/uv/genomics-logicalmodel/StructureDefinition/MolecularPreciseInterval"
+                    }
+                ],
+                "base": {
+                    "path": "MolecularSequence.representation.relative.edits.interval",
+                    "min": 0,
+                    "max": "1"
+                }
+            },
+            {
+                "label": "replacedSequence",
+                "id": "MolecularSequence.representations.relative.edits.referenceSequence[x]",
+                "path": "MolecularSequence.representation.relative.edits.replacedSequence[x]",
+                "short": "Contents of the sequence that will be edited",
+                "definition": "The content of the sub-Sequence that will be replaced in the current edit operation",
+                "min": 0,
+                "max": "1",
+                "mustSupport": false,
+                "type": [
+                    {
+                        "code": "Reference",
+                        "targetProfile": ["http://hl7.org/fhir/uv/genomics-logicalmodel/StructureDefinition/MolecularSequence"]
+                    },
+                    {
+                        "code": "string"
+                    }
+                ],
+                "base": {
+                    "path": "MolecularSequence.representation.relative.edits.replacedSequence[x]",
+                    "min": 0,
+                    "max": "1"
+                }
+            },
+            {
+                "label": "replacementSequence",
+                "id": "MolecularSequence.representations.relative.edits.replacementSequence[x]",
+                "path": "MolecularSequence.representation.relative.edits.replacementSequence[x]",
+                "short": "The content used in the replacement",
+                "definition": "The replacement Sequence used in the current edit operation",
+                "min": 1,
+                "max": "1",
+                "mustSupport": true,
+                "type": [
+                    {
+                        "code": "Reference",
+                        "targetProfile": ["http://hl7.org/fhir/uv/genomics-logicalmodel/StructureDefinition/MolecularSequence"]
+                    },
+                    {
+                        "code": "string"
+                    }
+                ],
+                "base": {
+                    "path": "MolecularSequence.representation.relative.edits.replacementSequence[x]",
+                    "min": 0,
+                    "max": "1"
+                }
+            },
+            {
+                "label": "relationship",
+                "id": "MolecularSequence.relationship",
+                "path": "MolecularSequence.relationship",
+                "short": "Relationship between two Sequences",
+                "definition": "This element captures information about the relationship between two Sequences.  Ideally, the relationship will be codified using concepts from an ontology.",
+                "min": 0,
+                "max": "*",
+                "mustSupport": false,
+                "type": [
+                    {
+                        "code": "BackboneElement"
+                    }
+                ],
+                "base": {
+                    "path": "MolecularSequence.relationship",
+                    "min": 0,
+                    "max": "1"
+                }
+            },
+            {
+                "label": "type",
+                "id": "MolecularSequence.relationship.type",
+                "path": "MolecularSequence.relationship.type",
+                "short": "Relationship type",
+                "definition": "The relationship between two sequences.  For example: transcribed to, transcribed from, translated to, translated from.  Ideally, the concepts used to express the relationship should be defined in an ontology.",
+                "min": 1,
+                "max": "1",
+                "mustSupport": false,
+                "type": [
+                    {
+                        "code": "CodeableConcept"
+                    }
+                ],
+                "base": {
+                    "path": "MolecularSequence.relationship.type",
+                    "min": 0,
+                    "max": "1"
+                }
+            },
+            {
+                "label": "description",
+                "id": "MolecularSequence.relationship.description",
+                "path": "MolecularSequence.relationship.description",
+                "short": "Relationship description",
+                "definition": "A description of the relationship between two sequences.",
+                "min": 0,
+                "max": "1",
+                "mustSupport": false,
+                "type": [
+                    {
+                        "code": "string"
+                    }
+                ],
+                "base": {
+                    "path": "MolecularSequence.relationship.description",
+                    "min": 0,
+                    "max": "1"
+                }
+            },
+            {
+                "label": "sequence",
+                "id": "MolecularSequence.relationship.sequence",
+                "path": "MolecularSequence.relationship.sequence",
+                "short": "The target of the sequence relationship",
+                "definition": "A reference to a Sequence that represents the object of a defined relationship.",
+                "min": 1,
+                "max": "1",
+                "mustSupport": false,
+                "type": [
+                    {
+                        "code": "Reference",
+                        "targetProfile": ["http://hl7.org/fhir/uv/genomics-logicalmodel/StructureDefinition/MolecularSequence"]
+                    }
+                ],
+                "base": {
+                    "path": "MolecularSequence.relationship.sequence",
+                    "min": 0,
+                    "max": "1"
+                }
+            }
+        ]
+    }
+}
