@@ -4,26 +4,15 @@
 Current conceptual model is [here](https://docs.google.com/document/d/1Wys14HNJAEB_YJ-EeDPAKX50_oxiDqAKi3WD4wlfjbk/edit)
 
 ## How to use this
-The TransformerService can be run from the command line using java and requires two text inputs that represent the path of first
-the XSL file and second the source XML(XMI or XSD) file.
+Use the IG folder to manage the Implementation Guide
+Add SD's to the ig\input\resources folder
+Add a reference to that SD to the ig\genomics-logicalmodel.xml file (as a Resource)
 
-## How to build Java Project
+## How to build the IG
+In the IG folder, run
 ```
-mvn package
-```
-
-## How to run Java Project
-```
-java org.basic.xsd.transform.fhir.TransformService "resources/ClinGen2Fhir.xsl" "resources/EASchemaAssertion.XSD"
+sh _updatePublisher.sh (answering Y to all prompts)
+sh _genonce.sh
 ```
 
-```
-java -jar target/XSLTTransformer-0.0.1-SNAPSHOT-jar-with-dependencies.jar resources/ClinGen2Fhir.xsl resources/EASchemaAssertion.XSD
-```
-
-## How to run saxon parser
-```
-java -jar ./saxon/saxon9he.jar -t -s:resources/EASchemaAssertion.XSD -xsl:resources/ClinGen2Fhir.xsl -o:output.txt
-
-java -jar ./saxon/saxon9he.jar -t -s:resources/EAFullModelNative.xml -xsl:resources/XMI2FHIRXML.xsl
-```
+You can then view the ig\output\index.html to see the home page of the IG
